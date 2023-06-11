@@ -11,7 +11,6 @@
 		"name": "Josh Goldberg",
 		"email": "npm@joshuakgoldberg.com"
 	},
-	"type": "module",
 	"main": "./lib/index.js",
 	"bin": "./lib/hydrate/index.js",
 	"files": [
