@@ -12,7 +12,7 @@ dependencies:
     specifier: ^7.22.5
     version: 7.22.5
   prettier:
-    specifier: ^2.8.8
+    specifier: ^2
     version: 2.8.8
 
 devDependencies:
@@ -111,7 +111,7 @@ devDependencies:
     version: 5.0.0(npm-package-json-lint@6.4.0)
   prettier-plugin-packagejson:
     specifier: ^2.4.3
-    version: 2.4.3
+    version: 2.4.3(prettier@2.8.8)
   release-it:
     specifier: ^15.10.3
     version: 15.10.3
@@ -5263,7 +5263,7 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-packagejson@2.4.3:
+  /prettier-plugin-packagejson@2.4.3(prettier@2.8.8):
     resolution: {integrity: sha512-kPeeviJiwy0BgOSk7No8NmzzXfW4R9FYWni6ziA5zc1kGVVrKnBzMZdu2TUhI+I7h8/5Htt3vARYOk7KKJTTNQ==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -5271,6 +5271,7 @@ packages:
       prettier:
         optional: true
     dependencies:
+      prettier: 2.8.8
       sort-package-json: 2.4.1
       synckit: 0.8.5
     dev: true
@@ -5279,7 +5280,6 @@ packages:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: false
 
   /pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
