@@ -1,0 +1,16 @@
+{
+	"$schema": "https://unpkg.com/knip@next/schema.json",
+	"entry": [
+		"src/index.ts!",
+		"src/hydrate/index.ts",
+		"src/setup/index.ts",
+		"script/*e2e.js"
+	],
+	"ignoreBinaries": ["dedupe", "gh"],
+	"ignoreDependencies": ["all-contributors-cli", "c8"],
+	"ignoreExportsUsedInFile": {
+		"interface": true,
+		"type": true
+	},
+	"project": ["src/**/*.ts!", "script/**/*.js"]
+}
