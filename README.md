@@ -38,8 +38,7 @@ You'll then be able to list it as a [Prettier plugin](https://prettier.io/docs/e
 
 ```jsonc
 {
-	"plugins": ["prettier-plugin-packagejson"],
-	"useTabs": true
+	"plugins": ["prettier-plugin-curly"]
 }
 ```
 
