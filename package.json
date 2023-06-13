@@ -12,7 +12,6 @@
 		"email": "npm@joshuakgoldberg.com"
 	},
 	"main": "./lib/index.js",
-	"bin": "./lib/hydrate/index.js",
 	"files": [
 		"lib/",
 		"package.json",
