@@ -72,7 +72,7 @@ Thanks! 💖
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://mk1.io"><img src="https://avatars.githubusercontent.com/u/58381667?v=4?s=100" width="100px;" alt="ʀᴀʏ"/><br /><sub><b>ʀᴀʏ</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commits?author=so1ve" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://mk1.io"><img src="https://avatars.githubusercontent.com/u/58381667?v=4?s=100" width="100px;" alt="ʀᴀʏ"/><br /><sub><b>ʀᴀʏ</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commits?author=so1ve" title="Documentation">📖</a> <a href="https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commits?author=so1ve" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
