@@ -6,7 +6,7 @@
 	<a href="#contributors" target="_blank">
 <!-- prettier-ignore-start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<img alt="All Contributors: 2" src="https://img.shields.io/badge/all_contributors-2-21bb42.svg" />
+<img alt="All Contributors: 3" src="https://img.shields.io/badge/all_contributors-3-21bb42.svg" />
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- prettier-ignore-end -->
 	</a>
@@ -72,6 +72,7 @@ Thanks! 💖
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://navinmoorthy.me/"><img src="https://avatars.githubusercontent.com/u/39694575?v=4?s=100" width="100px;" alt="Navin Moorthy"/><br /><sub><b>Navin Moorthy</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues?q=author%3Anavin-moorthy" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mk1.io"><img src="https://avatars.githubusercontent.com/u/58381667?v=4?s=100" width="100px;" alt="ʀᴀʏ"/><br /><sub><b>ʀᴀʏ</b></sub></a><br /><a href="https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commits?author=so1ve" title="Documentation">📖</a> <a href="https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commits?author=so1ve" title="Code">💻</a></td>
     </tr>
   </tbody>
