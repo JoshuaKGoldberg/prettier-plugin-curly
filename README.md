@@ -57,6 +57,8 @@ Prettier generally does not modify the structure of code: which includes [not en
 However, enforcing `curly` generally does not modify code runtime behavior, and is often desirable for code consistency and to avoid accidental bugs.
 This plugin enforces the equivalent of [`curly`'s `all` option](https://eslint.org/docs/latest/rules/curly#all) at the Prettier level.
 
+> See [The Blurry Line Between Formatting and Style](https://blog.joshuakgoldberg.com/the-blurry-line-between-formatting-and-style) for more details.
+
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
