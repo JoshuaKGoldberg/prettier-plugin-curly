@@ -39,7 +39,7 @@ const getParseOptions = (isJsx: boolean): ParserOptions => ({
 
 export function preprocess(
 	code: string,
-	options: Pick<RequiredOptions, "filepath">
+	options: Pick<RequiredOptions, "filepath">,
 ) {
 	const ast = parse(code, getParseOptions(/(?:js|x)$/.test(options.filepath)));
 	const collectedNodes: CollectibleNode[] = [];
