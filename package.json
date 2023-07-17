@@ -1,6 +1,6 @@
 {
 	"name": "prettier-plugin-curly",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Prettier plugin to enforce consistent brace style for all control statements.",
 	"repository": {
 		"type": "git",
