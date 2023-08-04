@@ -78,7 +78,7 @@
 		"sentences-per-line": "^0.2.1",
 		"should-semantic-release": "^0.1.1",
 		"typescript": "^5.0.4",
-		"vitest": "^0.33.0",
+		"vitest": "^0.34.0",
 		"yaml-eslint-parser": "^1.2.2"
 	},
 	"peerDependencies": {
