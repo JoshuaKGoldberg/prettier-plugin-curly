@@ -57,14 +57,11 @@ export function printNodeWithBrackets(code: string, node: CollectibleNode) {
 				" }",
 				node.alternate && [
 					" else ",
-					node.alternate.type !== "IfStatement" &&
-						(node.alternate.type === "BlockStatement"
-							? code.slice(node.alternate.start!, node.alternate.end!)
-							: [
-									"{ ",
-									code.slice(node.alternate.start!, node.alternate.end!),
-									" }",
-							  ]),
+					node.alternate.type !== "IfStatement" && [
+						node.alternate.type !== "BlockStatement" && "{ ",
+						code.slice(node.alternate.start!, node.alternate.end!),
+						node.alternate.type !== "BlockStatement" && " }",
+					],
 				],
 			]
 				.flat(Infinity)
