@@ -44,6 +44,5 @@
   "projectName": "prettier-plugin-curly",
   "projectOwner": "JoshuaKGoldberg",
   "repoHost": "https://github.com",
-  "repoType": "github",
-  "commitType": "docs"
+  "repoType": "github"
 }

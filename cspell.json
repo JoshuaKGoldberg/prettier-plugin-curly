@@ -1,13 +1,12 @@
 {
 	"dictionaries": ["typescript"],
 	"ignorePaths": [
-		"./coverage*",
 		".github",
 		"CHANGELOG.md",
+		"coverage",
 		"lib",
 		"node_modules",
-		"pnpm-lock.yaml",
-		"src/setup/*.json"
+		"pnpm-lock.yaml"
 	],
 	"words": [
 		"Codecov",
@@ -15,16 +14,14 @@
 		"commitlint",
 		"contributorsrc",
 		"conventionalcommits",
-		"execa",
 		"knip",
 		"lcov",
 		"markdownlintignore",
-		"npmignore",
 		"npmpackagejsonlintrc",
 		"outro",
 		"packagejson",
 		"quickstart",
-		"Unstaged",
+		"tsup",
 		"wontfix"
 	]
 }

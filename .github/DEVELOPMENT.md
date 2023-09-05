@@ -37,12 +37,20 @@ pnpm format:write
 This package includes several forms of linting to enforce consistent code quality and styling.
 Each should be shown in VS Code, and can be run manually on the command-line:
 
+- `pnpm lint` ([ESLint](https://eslint.org) with [typescript-eslint](https://typescript-eslint.io)): Lints JavaScript and TypeScript source files
 - `pnpm lint:knip` ([knip](https://github.com/webpro/knip)): Detects unused files, dependencies, and code exports
 - `pnpm lint:md` ([Markdownlint](https://github.com/DavidAnson/markdownlint)): Checks Markdown source files
-- `pnpm lint:package` ([npm-package-json-lint](https://npmpackagejsonlint.org/)): Lints the `package.json` file
+- `pnpm lint:package-json` ([npm-package-json-lint](https://npmpackagejsonlint.org/)): Lints the `package.json` file
 - `pnpm lint:packages` ([pnpm dedupe --check](https://pnpm.io/cli/dedupe)): Checks for unnecessarily duplicated packages in the `pnpm-lock.yml` file
 - `pnpm lint:spelling` ([cspell](https://cspell.org)): Spell checks across all source files
-- `pnpm lint` ([ESLint](https://eslint.org) with [typescript-eslint](https://typescript-eslint.io)): Lints JavaScript and TypeScript source files
+
+Read the individual documentation for each linter to understand how it can be configured and used best.
+
+For example, ESLint can be run with `--fix` to auto-fix some lint rule complaints:
+
+```shell
+pnpm run lint --fix
+```
 
 ## Testing
 
@@ -67,31 +75,18 @@ Calls to `console.log`, `console.warn`, and other console methods will cause a t
 This repository includes a [VS Code launch configuration](https://code.visualstudio.com/docs/editor/debugging) for debugging unit tests.
 To launch it, open a test file, then run _Debug Current Test File_ from the VS Code Debug panel (or press F5).
 
-## The Hydration Script
+## Type Checking
 
-This template's "hydration" script is located in `src/hydrate/`.
-It needs to be [built](#building) before it can be run.
+You should be able to see suggestions from [TypeScript](https://typescriptlang.org) in your editor for all open files.
 
-Be warned that running the hydration script in a repository -including this one- will modify that repository.
-To test out the script, you may want to create a new test repository to run on:
+However, it can be useful to run the TypeScript command-line (`tsc`) to type check all files in `src/`:
 
 ```shell
-cd ..
-mkdir temp
-cd temp
-echo node_modules > .gitignore
-git init
-npm init --yes
+pnpm tsc
 ```
 
-Then, in that directory, you can directly call the hydration script:
+Add `--watch` to keep the type checker running in a watch mode that updates the display as you save files:
 
 ```shell
-node ../prettier-plugin-curly/lib/hydrate/index.js -- description "Hooray, trying things out locally."
+pnpm tsc --watch
 ```
-
-Along with the hydration script itself, end-to-end tests are removed on package setup.
-
-## The Setup Script
-
-This template's "setup" script is located in `script/`.
