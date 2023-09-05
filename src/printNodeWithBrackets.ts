@@ -50,26 +50,24 @@ export function printNodeWithBrackets(code: string, node: CollectibleNode) {
 			].join("");
 
 		case "IfStatement":
-			const alternateText = node.alternate
-				? node.alternate.type === "IfStatement"
-					? [" else "] // Handled by the next call to printNodeWithBrackets
-					: [
-							" else { ",
-							node.alternate.type === "BlockStatement"
-								? code.slice(
-										node.alternate.body[0].start!,
-										node.alternate.body[node.alternate.body.length - 1].end!,
-								  )
-								: code.slice(node.alternate.start!, node.alternate.end!),
-							" }",
-					  ]
-				: [];
 			return [
 				code.slice(node.start!, node.test.end!),
 				") { ",
 				code.slice(node.consequent.start!, node.consequent.end!),
 				" }",
-				alternateText,
+				node.alternate &&
+					(node.alternate.type === "IfStatement"
+						? [" else "] // Handled by the next call to printNodeWithBrackets
+						: [
+								" else { ",
+								node.alternate.type === "BlockStatement"
+									? code.slice(
+											node.alternate.body[0].start!,
+											node.alternate.body[node.alternate.body.length - 1].end!,
+									  )
+									: code.slice(node.alternate.start!, node.alternate.end!),
+								" }",
+						  ]),
 			]
 				.flat()
 				.filter(Boolean)
