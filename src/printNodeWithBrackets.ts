@@ -55,22 +55,20 @@ export function printNodeWithBrackets(code: string, node: CollectibleNode) {
 				") { ",
 				code.slice(node.consequent.start!, node.consequent.end!),
 				" }",
-				node.alternate &&
-					(node.alternate.type === "IfStatement"
-						? [" else "] // Handled by the next call to printNodeWithBrackets
-						: [
-								" else { ",
-								node.alternate.type === "BlockStatement"
-									? code.slice(
-											node.alternate.body[0].start!,
-											node.alternate.body[node.alternate.body.length - 1].end!,
-									  )
-									: code.slice(node.alternate.start!, node.alternate.end!),
-								" }",
-						  ]),
+				node.alternate && [
+					" else ",
+					node.alternate.type !== "IfStatement" &&
+						(node.alternate.type === "BlockStatement"
+							? code.slice(node.alternate.start!, node.end!)
+							: [
+									"{ ",
+									code.slice(node.alternate.start!, node.alternate.end!),
+									" }",
+							  ]),
+				],
 			]
+				.flat(Infinity)
 				.filter(Boolean)
-				.flat()
 				.join("");
 
 		case "WhileStatement":
