@@ -53,9 +53,20 @@ export function printNodeWithBrackets(code: string, node: CollectibleNode) {
 			return [
 				code.slice(node.start!, node.test.end!),
 				") { ",
-				code.slice(node.consequent.start!, node.end!),
+				code.slice(node.consequent.start!, node.consequent.end!),
 				" }",
-			].join("");
+				node.alternate && [
+					" else ",
+					node.alternate.type !== "IfStatement" && [
+						node.alternate.type !== "BlockStatement" && "{ ",
+						code.slice(node.alternate.start!, node.alternate.end!),
+						node.alternate.type !== "BlockStatement" && " }",
+					],
+				],
+			]
+				.flat(Infinity)
+				.filter(Boolean)
+				.join("");
 
 		case "WhileStatement":
 			return [
