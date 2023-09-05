@@ -69,8 +69,8 @@ export function printNodeWithBrackets(code: string, node: CollectibleNode) {
 								" }",
 						  ]),
 			]
-				.flat()
 				.filter(Boolean)
+				.flat()
 				.join("");
 
 		case "WhileStatement":
