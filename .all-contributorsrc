@@ -8,7 +8,8 @@
       "contributions": [
         "tool",
         "maintenance",
-        "code"
+        "code",
+        "infra"
       ],
       "login": "JoshuaKGoldberg",
       "name": "Josh Goldberg",
@@ -44,5 +45,6 @@
   "projectName": "prettier-plugin-curly",
   "projectOwner": "JoshuaKGoldberg",
   "repoHost": "https://github.com",
-  "repoType": "github"
+  "repoType": "github",
+  "commitType": "docs"
 }
