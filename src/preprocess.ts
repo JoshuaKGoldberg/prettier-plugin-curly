@@ -54,6 +54,8 @@ export function preprocess(
 		};
 	}
 
+	// @ts-expect-error - error TS2349: This expression is not callable.
+	// Type 'typeof import("node_modules/.pnpm/@types+babel__traverse@7.20.1/node_modules/@types/babel__traverse/index")' has no call signatures.
 	traverse(ast, {
 		DoWhileStatement: createCollector("body"),
 		ForInStatement: createCollector("body"),
