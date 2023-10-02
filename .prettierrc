@@ -1,9 +1,9 @@
 {
 	"$schema": "http://json.schemastore.org/prettierrc",
-	"plugins": ["prettier-plugin-packagejson"],
 	"overrides": [
 		{ "files": ".*rc", "options": { "parser": "json" } },
 		{ "files": ".nvmrc", "options": { "parser": "yaml" } }
 	],
+	"plugins": ["./lib/index.js", "prettier-plugin-packagejson"],
 	"useTabs": true
 }

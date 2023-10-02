@@ -1,15 +1,15 @@
-import { parsers as babelParsers } from "prettier/parser-babel";
-import { parsers as typescriptParsers } from "prettier/parser-typescript";
+import babel from "prettier/parser-babel";
+import typescript from "prettier/parser-typescript";
 
 import { preprocess } from "./preprocess.js";
 
 export const parsers = {
 	babel: {
-		...babelParsers.babel,
+		...babel.parsers.babel,
 		preprocess,
 	},
 	typescript: {
-		...typescriptParsers.typescript,
+		...typescript.parsers.typescript,
 		preprocess,
 	},
 };
