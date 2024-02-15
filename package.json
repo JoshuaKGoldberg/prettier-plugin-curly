@@ -46,7 +46,7 @@
 		"@types/babel__traverse": "^7.20.1",
 		"@types/eslint": "^8.44.3",
 		"@types/prettier": "^2.7.3",
-		"@typescript-eslint/eslint-plugin": "^6.7.3",
+		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^6.7.3",
 		"@vitest/coverage-v8": "^1.0.0",
 		"console-fail-test": "^0.2.3",
