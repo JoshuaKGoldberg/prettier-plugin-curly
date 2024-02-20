@@ -1,6 +1,5 @@
 import { ParserOptions, parse } from "@babel/parser";
 import traverse, { NodePath } from "@babel/traverse";
-import { Node } from "@babel/types";
 import { RequiredOptions } from "prettier";
 
 import { printNodeWithBrackets } from "./printNodeWithBrackets.js";
@@ -34,6 +33,7 @@ const getParseOptions = (isJsx: boolean): ParserOptions => ({
 		...(isJsx ? ["jsx" as const] : []),
 		["importAttributes", { deprecatedAssertSyntax: true }],
 	],
+	ranges: true,
 	sourceType: "module",
 });
 
@@ -44,24 +44,18 @@ export function preprocess(
 	const ast = parse(code, getParseOptions(/(?:js|x)$/.test(options.filepath)));
 	const collectedNodes: CollectibleNode[] = [];
 
-	function createCollector<PropertyKey extends string>(property: PropertyKey) {
-		return ({
-			node,
-		}: NodePath<CollectibleNode & Record<PropertyKey, Node>>) => {
-			if (node[property].type !== "BlockStatement") {
-				collectedNodes.push(node);
-			}
-		};
+	function collector({ node }: NodePath<CollectibleNode>) {
+		collectedNodes.push(node);
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- CJS/ESM 🫠
 	(traverse.default || traverse)(ast, {
-		DoWhileStatement: createCollector("body"),
-		ForInStatement: createCollector("body"),
-		ForOfStatement: createCollector("body"),
-		ForStatement: createCollector("body"),
-		IfStatement: createCollector("consequent"),
-		WhileStatement: createCollector("body"),
+		DoWhileStatement: collector,
+		ForInStatement: collector,
+		ForOfStatement: collector,
+		ForStatement: collector,
+		IfStatement: collector,
+		WhileStatement: collector,
 		noScope: true,
 	});
 

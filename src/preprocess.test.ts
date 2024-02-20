@@ -17,6 +17,7 @@ describe("preprocess", () => {
 		[`if (a) b;`, `if (a) { b; }`],
 		[`if (a) { b; }`, `if (a) { b; }`],
 		[`if (a) b; else c;`, `if (a) { b; } else { c; }`],
+		[`if (a) {} else b;`, `if (a) {} else { b; }`],
 		[`if (a) b; else { c; }`, `if (a) { b; } else { c; }`],
 		[`if (a) b; else if (b) c;`, `if (a) { b; } else if (b) { c; }`],
 		["let a; let a;", "let a; let a;"],
