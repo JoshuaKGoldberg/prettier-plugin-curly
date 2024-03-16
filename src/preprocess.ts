@@ -1,8 +1,9 @@
+import generate from "@babel/generator";
 import { ParserOptions, parse } from "@babel/parser";
 import traverse, { NodePath } from "@babel/traverse";
 import { RequiredOptions } from "prettier";
 
-import { printNodeWithBrackets } from "./printNodeWithBrackets.js";
+import { ensureNodeHasBrackets } from "./ensureNodeHasBrackets.js";
 import { CollectibleNode } from "./types.js";
 
 const getParseOptions = (isJsx: boolean): ParserOptions => ({
@@ -33,13 +34,14 @@ const getParseOptions = (isJsx: boolean): ParserOptions => ({
 		...(isJsx ? ["jsx" as const] : []),
 		["importAttributes", { deprecatedAssertSyntax: true }],
 	],
+
 	ranges: true,
 	sourceType: "module",
 });
 
 export function preprocess(
 	code: string,
-	options: Pick<RequiredOptions, "filepath">,
+	options: Partial<RequiredOptions> & Pick<RequiredOptions, "filepath">,
 ) {
 	const ast = parse(code, getParseOptions(/(?:js|x)$/.test(options.filepath)));
 	const collectedNodes: CollectibleNode[] = [];
@@ -59,16 +61,16 @@ export function preprocess(
 		noScope: true,
 	});
 
-	let output = "";
-	let lastEnd = 0;
-
-	/* eslint-disable @typescript-eslint/no-non-null-assertion */
 	for (const collectedNode of collectedNodes) {
-		output += code.slice(lastEnd, collectedNode.start!);
-		output += printNodeWithBrackets(code, collectedNode);
-		lastEnd = collectedNode.end!;
+		ensureNodeHasBrackets(collectedNode);
 	}
-	/* eslint-enable @typescript-eslint/no-non-null-assertion */
 
-	return output + code.slice(lastEnd);
+	// See https://github.com/prettier/prettier/issues/9114 for a Prettier AST format API.
+	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- CJS/ESM 🫠
+	return (generate.default || generate)(ast, {
+		comments: true,
+		filename: options.filepath,
+		retainFunctionParens: true,
+		retainLines: true,
+	}).code;
 }
