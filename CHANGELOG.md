@@ -1,3 +1,9 @@
+## [0.2.1](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.0...0.2.1) (2024-03-16)
+
+### Bug Fixes
+
+- allow empty statement bodies ([203a355](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/203a35518cfb3cda8d1061c5247e2ad66bfbff9d))
+
 # [0.2.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.1.4...0.2.0) (2024-03-16)
 
 ### Bug Fixes
