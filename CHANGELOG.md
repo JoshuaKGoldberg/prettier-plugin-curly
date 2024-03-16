@@ -1,3 +1,13 @@
+# [0.2.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.1.4...0.2.0) (2024-03-16)
+
+### Bug Fixes
+
+- only print modified nodes ([122c65f](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/122c65f9ab8d2462b9f5fe25c3c1e2be61972972))
+
+### Features
+
+- fully reprint AST with @babel/generator ([efb121c](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/efb121c67a4ce90c50fe4c8c5ba057f66040c9f7))
+
 ## [0.1.4](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.1.2...0.1.4) (2024-02-20)
 
 ### Bug Fixes
