@@ -10,6 +10,10 @@ const printOptions: GeneratorOptions = {
 };
 
 export function reprintAst(code: string, collectedNodes: CollectibleNode[]) {
+	if (!collectedNodes.length) {
+		return code;
+	}
+
 	let output = "";
 	let lastEnd = 0;
 

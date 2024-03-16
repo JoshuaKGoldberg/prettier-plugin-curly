@@ -4,7 +4,7 @@ import { modifyNodeIfMissingBrackets } from "./modifyNodeIfMissingBrackets.js";
 import { CollectibleNode } from "./types.js";
 
 export function traverseAndModifyAst(ast: Node) {
-	const collectedNodes = new Set<CollectibleNode>();
+	const modifiedNodes = new Set<CollectibleNode>();
 	const seenNodes = new Set<Node>();
 
 	function collector({ node }: NodePath<CollectibleNode>) {
@@ -12,7 +12,7 @@ export function traverseAndModifyAst(ast: Node) {
 			modifyNodeIfMissingBrackets(node) &&
 			nodeNotAlreadySeen(node, seenNodes)
 		) {
-			collectedNodes.add(node);
+			modifiedNodes.add(node);
 		}
 	}
 
@@ -27,7 +27,7 @@ export function traverseAndModifyAst(ast: Node) {
 		noScope: true,
 	});
 
-	return collectedNodes;
+	return modifiedNodes;
 }
 
 function nodeNotAlreadySeen(node: Node, seenNodes: Set<Node>) {

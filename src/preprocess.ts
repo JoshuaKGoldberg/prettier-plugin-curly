@@ -7,8 +7,8 @@ export function preprocess(code: string, options: ParseAstOptions): string {
 	const ast = parseAst(code, options);
 
 	// We then traverse it, collecting nodes that have block properties added.
-	const collectedNodes = traverseAndModifyAst(ast);
+	const modifiedNodes = traverseAndModifyAst(ast);
 
 	// We then print the AST back with Babel, modifying collected nodes' ranges.
-	return reprintAst(code, Array.from(collectedNodes));
+	return reprintAst(code, Array.from(modifiedNodes));
 }

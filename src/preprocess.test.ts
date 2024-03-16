@@ -116,6 +116,7 @@ while(a){// b
 		// https://github.com/JoshuaKGoldberg/prettier-plugin-curly/pull/309/files#r1527185682
 		[
 			`
+if (a) b;
 _ = {
 	a: [
 		"b",
@@ -124,6 +125,7 @@ _ = {
 };
 `,
 			`
+if(a){b}
 _ = {
 	a: [
 		"b",
