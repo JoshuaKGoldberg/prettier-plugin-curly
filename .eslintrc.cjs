@@ -12,7 +12,6 @@ module.exports = {
 		"plugin:regexp/recommended",
 		"plugin:vitest/recommended",
 	],
-
 	overrides: [
 		{
 			extends: ["plugin:markdown/recommended"],
@@ -25,7 +24,6 @@ module.exports = {
 				"plugin:@typescript-eslint/strict",
 				"plugin:@typescript-eslint/stylistic",
 			],
-
 			files: ["**/*.ts"],
 			parser: "@typescript-eslint/parser",
 			rules: {
@@ -36,7 +34,6 @@ module.exports = {
 					"always",
 					{ enforceForIfStatements: true },
 				],
-
 				"operator-assignment": "error",
 
 				// These on-by-default rules don't work well for this repo and we like them off.
@@ -61,7 +58,6 @@ module.exports = {
 				"plugin:@typescript-eslint/strict-type-checked",
 				"plugin:@typescript-eslint/stylistic-type-checked",
 			],
-
 			files: ["**/*.ts"],
 			parser: "@typescript-eslint/parser",
 			parserOptions: {
@@ -108,7 +104,6 @@ module.exports = {
 						pathPattern: "^.*$",
 					},
 				],
-
 				"yml/sort-sequence-values": [
 					"error",
 					{
@@ -119,7 +114,6 @@ module.exports = {
 			},
 		},
 	],
-
 	parser: "@typescript-eslint/parser",
 	plugins: [
 		"@typescript-eslint",
@@ -130,7 +124,6 @@ module.exports = {
 		"regexp",
 		"vitest",
 	],
-
 	reportUnusedDisableDirectives: true,
 	root: true,
 	rules: {
@@ -149,7 +142,6 @@ module.exports = {
 			"error",
 			{ blankLine: "always", next: "*", prev: "block-like" },
 		],
-
 		"perfectionist/sort-objects": [
 			"error",
 			{

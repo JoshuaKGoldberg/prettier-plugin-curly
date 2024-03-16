@@ -10,7 +10,7 @@ function wrapInBlock(node: Statement): BlockStatement {
 	};
 }
 
-export function ensureNodeHasBrackets(node: CollectibleNode) {
+export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 	switch (node.type) {
 		case "DoWhileStatement":
 		case "ForStatement":
@@ -19,13 +19,17 @@ export function ensureNodeHasBrackets(node: CollectibleNode) {
 		case "WhileStatement":
 			if (node.body.type !== "BlockStatement") {
 				node.body = wrapInBlock(node.body);
+				return true;
 			}
 
-			return;
+			break;
 
-		case "IfStatement":
+		case "IfStatement": {
+			let modified: true | undefined;
+
 			if (node.consequent.type !== "BlockStatement") {
 				node.consequent = wrapInBlock(node.consequent);
+				modified = true;
 			}
 
 			if (
@@ -33,6 +37,12 @@ export function ensureNodeHasBrackets(node: CollectibleNode) {
 				!["BlockStatement", "IfStatement"].includes(node.alternate.type)
 			) {
 				node.alternate = wrapInBlock(node.alternate);
+				modified = true;
 			}
+
+			return modified;
+		}
 	}
+
+	return false;
 }
