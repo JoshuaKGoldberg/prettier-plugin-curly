@@ -4,7 +4,7 @@ import typescript from "prettier/parser-typescript";
 
 import { preprocess } from "./preprocess.js";
 
-export const parsers: Record<string, Parser> = {
+export const parsers = {
 	babel: {
 		...babel.parsers.babel,
 		preprocess,
@@ -13,4 +13,4 @@ export const parsers: Record<string, Parser> = {
 		...typescript.parsers.typescript,
 		preprocess,
 	},
-};
+} satisfies Record<string, Parser>;
