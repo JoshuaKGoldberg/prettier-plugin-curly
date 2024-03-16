@@ -116,7 +116,30 @@ while (a) {// b
   (<c> d);}
 `,
 		],
+
+		// https://github.com/JoshuaKGoldberg/prettier-plugin-curly/pull/309/files#r1527185682
+		[
+			`
+_ = {
+	a: [
+		"b",
+	],
+	c: "d"
+};
+`,
+			`
+_ = {
+  a: [
+  "b"],
+  c: "d"
+};
+			`,
+		],
 	])("%s becomes %s", (input, expected, filepath = "test.ts") => {
-		expect(preprocess(input, { filepath }).trim()).toBe(expected.trim());
+		expect(
+			preprocess(input, {
+				filepath,
+			}).trim(),
+		).toBe(expected.trim());
 	});
 });
