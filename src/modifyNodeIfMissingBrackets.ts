@@ -10,6 +10,9 @@ function wrapInBlock(node: Statement): BlockStatement {
 	};
 }
 
+const allowedBodyNodeTypes = new Set(["BlockStatement", "EmptyStatement"]);
+const allowedIfAlternateNodeTypes = new Set(["BlockStatement", "IfStatement"]);
+
 export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 	switch (node.type) {
 		case "DoWhileStatement":
@@ -17,7 +20,7 @@ export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 		case "ForInStatement":
 		case "ForOfStatement":
 		case "WhileStatement":
-			if (node.body.type !== "BlockStatement") {
+			if (!allowedBodyNodeTypes.has(node.body.type)) {
 				node.body = wrapInBlock(node.body);
 				return true;
 			}
@@ -27,14 +30,14 @@ export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 		case "IfStatement": {
 			let modified: true | undefined;
 
-			if (node.consequent.type !== "BlockStatement") {
+			if (!allowedBodyNodeTypes.has(node.consequent.type)) {
 				node.consequent = wrapInBlock(node.consequent);
 				modified = true;
 			}
 
 			if (
 				node.alternate &&
-				!["BlockStatement", "IfStatement"].includes(node.alternate.type)
+				!allowedIfAlternateNodeTypes.has(node.alternate.type)
 			) {
 				node.alternate = wrapInBlock(node.alternate);
 				modified = true;
