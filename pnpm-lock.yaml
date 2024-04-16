@@ -75,7 +75,7 @@ devDependencies:
     version: 3.1.0
   eslint-plugin-perfectionist:
     specifier: ^2.1.0
-    version: 2.8.0(eslint@8.57.0)(typescript@5.4.5)
+    version: 2.9.0(eslint@8.57.0)(typescript@5.4.5)
   eslint-plugin-regexp:
     specifier: ^2.0.0
     version: 2.5.0(eslint@8.57.0)
@@ -3545,8 +3545,8 @@ packages:
     engines: {node: '>=5.0.0'}
     dev: true
 
-  /eslint-plugin-perfectionist@2.8.0(eslint@8.57.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-XBjQ4ctU1rOzQ4bFJoUowe8XdsIIz42JqNrouFlae1TO78HjoyYBaRP8+gAHDDQCSdHY10pbChyzlJeBA6D51w==}
+  /eslint-plugin-perfectionist@2.9.0(eslint@8.57.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-ipFtDrqtF99qVVo+FE1fo6aHyLLp7hg6PNGfzY5KxQjcl0XCbyEFvjtR1NfkHDTN9rdFeEDxg59LLOv3VOAHAw==}
     peerDependencies:
       astro-eslint-parser: ^0.16.0
       eslint: '>=8.0.0'
