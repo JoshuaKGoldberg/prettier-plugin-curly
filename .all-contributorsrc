@@ -54,6 +54,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "hyoban",
+      "name": "Stephen Zhou",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38493346?v=4",
+      "profile": "http://hyoban.xlog.page",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
