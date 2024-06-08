@@ -13,7 +13,7 @@ importers:
         version: 7.24.7
       '@babel/parser':
         specifier: ^7.22.5
-        version: 7.24.6
+        version: 7.24.7
       '@babel/traverse':
         specifier: ^7.22.5
         version: 7.24.6
@@ -185,8 +185,8 @@ packages:
     resolution: {integrity: sha512-2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.24.6':
-    resolution: {integrity: sha512-eNZXdfU35nJC2h24RznROuOpO94h6x8sg9ju0tT9biNtLZ2vuP8SduLqqV+/8+cebSLV9SJEAN5Z3zQbJG/M+Q==}
+  '@babel/parser@7.24.7':
+    resolution: {integrity: sha512-9uUYRm6OqQrCqQdG1iCBwBPZgN8ciDBro2nIOFaiRz1/BCxaI7CNvQbDHvsArAC7Tw9Hda/B3U+6ui9u4HWXPw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -4152,14 +4152,14 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.0.1
 
-  '@babel/parser@7.24.6':
+  '@babel/parser@7.24.7':
     dependencies:
       '@babel/types': 7.24.7
 
   '@babel/template@7.24.6':
     dependencies:
       '@babel/code-frame': 7.24.6
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.24.7
       '@babel/types': 7.24.7
 
   '@babel/traverse@7.24.6':
@@ -4170,7 +4170,7 @@ snapshots:
       '@babel/helper-function-name': 7.24.6
       '@babel/helper-hoist-variables': 7.24.6
       '@babel/helper-split-export-declaration': 7.24.6
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.24.7
       '@babel/types': 7.24.7
       debug: 4.3.5
       globals: 11.12.0
@@ -6875,7 +6875,7 @@ snapshots:
 
   magicast@0.3.4:
     dependencies:
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.24.7
       '@babel/types': 7.24.7
       source-map-js: 1.2.0
 
