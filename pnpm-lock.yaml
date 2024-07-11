@@ -23,7 +23,7 @@ importers:
         version: 7.24.7
       '@release-it/conventional-changelog':
         specifier: ^8.0.0
-        version: 8.0.1(release-it@17.4.1(typescript@5.5.3))
+        version: 8.0.1(release-it@17.5.0(typescript@5.5.3))
       '@types/babel__generator':
         specifier: ^7.6.8
         version: 7.6.8
@@ -119,7 +119,7 @@ importers:
         version: 2.5.0(prettier@3.0.3)
       release-it:
         specifier: ^17.0.0
-        version: 17.4.1(typescript@5.5.3)
+        version: 17.5.0(typescript@5.5.3)
       sentences-per-line:
         specifier: ^0.2.1
         version: 0.2.1
@@ -2521,9 +2521,8 @@ packages:
     resolution: {integrity: sha512-ozCC6gdQ+glXOQsveKD0YsDy8DSQFjDTz4zyzEHNV5+JP5D62LmfDZ6o1cycFx9ouG940M5dE8C8CTewdj2YWQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  lru-cache@10.3.1:
-    resolution: {integrity: sha512-9/8QXrtbGeMB6LxwQd4x1tIMnsmUxMvIH/qWGsccz6bt9Uln3S+sgAaqfQNhbGA8ufzs2fHuP/yqapGgP9Hh2g==}
-    engines: {node: '>=18'}
+  lru-cache@10.4.3:
+    resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
@@ -3065,8 +3064,8 @@ packages:
     resolution: {integrity: sha512-+crtS5QjFRqFCoQmvGduwYWEBng99ZvmFvF+cUJkGYF1L1BfU8C6Zp9T7f5vPAwyLkUExpvK+ANVZmGU49qi4Q==}
     engines: {node: '>=12'}
 
-  release-it@17.4.1:
-    resolution: {integrity: sha512-Aa48kKx5qZRVXJ6YCnCJRg6sJiofEX7RErTLmnlFbCE7k1Kg8ayhgJovofuBhCtz3FRdsYnxBKjlh+VAMeazEA==}
+  release-it@17.5.0:
+    resolution: {integrity: sha512-+g6k/7i6AjdCozLkcybvwgYLw/RF6bcYJHf1xDLcg36GeBu8zr/geI9joLk5drubiE/UKdN694vwAeimmJWt8Q==}
     engines: {node: ^18.18.0 || ^20.9.0 || ^22.0.0}
     hasBin: true
 
@@ -4327,12 +4326,12 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@release-it/conventional-changelog@8.0.1(release-it@17.4.1(typescript@5.5.3))':
+  '@release-it/conventional-changelog@8.0.1(release-it@17.5.0(typescript@5.5.3))':
     dependencies:
       concat-stream: 2.0.0
       conventional-changelog: 5.1.0
       conventional-recommended-bump: 9.0.0
-      release-it: 17.4.1(typescript@5.5.3)
+      release-it: 17.5.0(typescript@5.5.3)
       semver: 7.6.2
 
   '@rollup/rollup-android-arm-eabi@4.18.0':
@@ -5752,7 +5751,7 @@ snapshots:
 
   hosted-git-info@7.0.1:
     dependencies:
-      lru-cache: 10.3.1
+      lru-cache: 10.4.3
 
   html-escaper@2.0.2: {}
 
@@ -6157,7 +6156,7 @@ snapshots:
 
   lowercase-keys@3.0.0: {}
 
-  lru-cache@10.3.1: {}
+  lru-cache@10.4.3: {}
 
   lru-cache@6.0.0:
     dependencies:
@@ -6592,7 +6591,7 @@ snapshots:
 
   path-scurry@1.11.1:
     dependencies:
-      lru-cache: 10.3.1
+      lru-cache: 10.4.3
       minipass: 7.1.2
 
   path-type@4.0.0: {}
@@ -6761,7 +6760,7 @@ snapshots:
     dependencies:
       rc: 1.2.8
 
-  release-it@17.4.1(typescript@5.5.3):
+  release-it@17.5.0(typescript@5.5.3):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 20.1.1
