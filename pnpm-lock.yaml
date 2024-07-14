@@ -16,7 +16,7 @@ importers:
         version: 7.24.8
       '@babel/traverse':
         specifier: ^7.22.5
-        version: 7.24.7
+        version: 7.24.8
     devDependencies:
       '@babel/types':
         specifier: ^7.22.5
@@ -194,8 +194,8 @@ packages:
     resolution: {integrity: sha512-jYqfPrU9JTF0PmPy1tLYHW4Mp4KlgxJD9l2nP9fD6yT/ICi554DmrWBAEYpIelzjHf1msDP3PxJIRt/nFNfBig==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/traverse@7.24.7':
-    resolution: {integrity: sha512-yb65Ed5S/QAcewNPh0nZczy9JdYXkkAbIsEo+P7BE7yO3txAY30Y/oPa3QkQ5It3xVG2kpKMg9MsdxZaO31uKA==}
+  '@babel/traverse@7.24.8':
+    resolution: {integrity: sha512-t0P1xxAPzEDcEPmjprAQq19NWum4K0EQPjMwZQZbHt+GiZqvjCHjj755Weq1YRPVzBI+3zSfvScfpnuIecVFJQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.24.8':
@@ -3807,7 +3807,7 @@ snapshots:
       '@babel/parser': 7.24.8
       '@babel/types': 7.24.8
 
-  '@babel/traverse@7.24.7':
+  '@babel/traverse@7.24.8':
     dependencies:
       '@babel/code-frame': 7.24.7
       '@babel/generator': 7.24.8
