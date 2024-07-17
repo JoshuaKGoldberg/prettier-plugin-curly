@@ -17,6 +17,7 @@ export function traverseAndModifyAst(ast: Node) {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- CJS/ESM 🫠
+	// @ts-ignore
 	(traverse.default || traverse)(ast, {
 		DoWhileStatement: collector,
 		ForInStatement: collector,
@@ -38,7 +39,9 @@ function nodeNotAlreadySeen(node: Node, seenNodes: Set<Node>) {
 	// All child nodes are marked as seen and removed from collections,
 	// so that we don't accidentally print overlapping fixes for them later.
 	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- CJS/ESM 🫠
+	// @ts-ignore
 	(traverse.default || traverse)(node, {
+		// @ts-ignore
 		enter(path) {
 			seenNodes.add(path.node);
 		},
