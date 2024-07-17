@@ -1,3 +1,6 @@
+// CJS/ESM 🫠
+/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
+
 import traverse, { Node, NodePath } from "@babel/traverse";
 
 import { modifyNodeIfMissingBrackets } from "./modifyNodeIfMissingBrackets.js";
@@ -16,7 +19,6 @@ export function traverseAndModifyAst(ast: Node) {
 		}
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- CJS/ESM 🫠
 	// @ts-ignore
 	(traverse.default || traverse)(ast, {
 		DoWhileStatement: collector,
@@ -38,7 +40,6 @@ function nodeNotAlreadySeen(node: Node, seenNodes: Set<Node>) {
 
 	// All child nodes are marked as seen and removed from collections,
 	// so that we don't accidentally print overlapping fixes for them later.
-	// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition -- CJS/ESM 🫠
 	// @ts-ignore
 	(traverse.default || traverse)(node, {
 		// @ts-ignore
@@ -52,3 +53,5 @@ function nodeNotAlreadySeen(node: Node, seenNodes: Set<Node>) {
 
 	return true;
 }
+
+/* eslint-enable */

@@ -1,3 +1,5 @@
+// CJS/ESM 🫠
+/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/restrict-plus-operands */
 import generate, { GeneratorOptions } from "@babel/generator";
 
 import { CollectibleNode } from "./types.js";
@@ -22,7 +24,7 @@ export function reprintAst(code: string, collectedNodes: CollectibleNode[]) {
 		output += code.slice(lastEnd, collectedNode.start!);
 
 		// See https://github.com/prettier/prettier/issues/9114 for a Prettier AST format API.
-		// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+
 		// @ts-ignore
 		output += (generate.default || generate)(collectedNode, printOptions).code;
 
@@ -32,3 +34,5 @@ export function reprintAst(code: string, collectedNodes: CollectibleNode[]) {
 
 	return output + code.slice(lastEnd);
 }
+
+/* eslint-enable */

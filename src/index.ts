@@ -1,3 +1,5 @@
+// CJS/ESM 🫠
+/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
 import { Parser } from "prettier";
 import * as babel from "prettier/parser-babel";
 import * as typescript from "prettier/parser-typescript";
@@ -16,3 +18,5 @@ export const parsers = {
 		preprocess,
 	},
 } satisfies Record<string, Parser>;
+
+/* eslint-enable */
