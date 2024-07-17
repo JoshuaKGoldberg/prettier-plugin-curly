@@ -1,3 +1,9 @@
+## [0.2.2](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.1...0.2.2) (2024-07-17)
+
+### Bug Fixes
+
+- support running inside a CommonJS module ([09d4f1c](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/09d4f1c032b48593393d378e05955832ba8e9c04))
+
 ## [0.2.1](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.0...0.2.1) (2024-03-16)
 
 ### Bug Fixes
