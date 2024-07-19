@@ -116,7 +116,7 @@ importers:
         version: 3.3.3
       prettier-plugin-packagejson:
         specifier: ^2.4.6
-        version: 2.5.0(prettier@3.3.3)
+        version: 2.5.1(prettier@3.3.3)
       release-it:
         specifier: ^17.0.0
         version: 17.5.0(typescript@5.5.3)
@@ -2914,8 +2914,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier-plugin-packagejson@2.5.0:
-    resolution: {integrity: sha512-6XkH3rpin5QEQodBSVNg+rBo4r91g/1mCaRwS1YGdQJZ6jwqrg2UchBsIG9tpS1yK1kNBvOt84OILsX8uHzBGg==}
+  prettier-plugin-packagejson@2.5.1:
+    resolution: {integrity: sha512-6i4PW1KxEA+VrokYNGeI/q8qQX3u5DNBc7eLr9GX4OrvWr9DMls1lhbuNopkKG7Li9rTNxerWnYQyjxoUO4ROA==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -3112,6 +3112,11 @@ packages:
 
   semver@7.6.2:
     resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.6.3:
+    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3317,8 +3322,8 @@ packages:
     resolution: {integrity: sha512-Vhf+bUa//YSTYKseDiiEuQmhGCoIF3CVBhunm3r/DQnYiGT4JssmnKQc44BIyOZRK2pKjXXAgbhfmbeoC9CJpA==}
     engines: {node: '>=12.20'}
 
-  synckit@0.9.0:
-    resolution: {integrity: sha512-7RnqIMq572L8PeEzKeBINYEJDDxpcH8JEgLwUqBd3TkofhFRbkq4QLR0u+36avGAhCRbk2nnmjcW9SE531hPDg==}
+  synckit@0.9.1:
+    resolution: {integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   tapable@2.2.1:
@@ -4262,7 +4267,7 @@ snapshots:
       conventional-changelog: 5.1.0
       conventional-recommended-bump: 9.0.0
       release-it: 17.5.0(typescript@5.5.3)
-      semver: 7.6.2
+      semver: 7.6.3
 
   '@rollup/rollup-android-arm-eabi@4.18.0':
     optional: true
@@ -4423,7 +4428,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.6.3
       ts-api-utils: 1.3.0(typescript@5.5.3)
     optionalDependencies:
       typescript: 5.5.3
@@ -4851,7 +4856,7 @@ snapshots:
       handlebars: 4.7.8
       json-stringify-safe: 5.0.1
       meow: 12.1.1
-      semver: 7.6.2
+      semver: 7.6.3
       split2: 4.2.0
 
   conventional-changelog@5.1.0:
@@ -5001,7 +5006,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       file-entry-cache: 8.0.0
       get-stdin: 9.0.0
-      semver: 7.6.2
+      semver: 7.6.3
       strip-ansi: 7.1.0
       vscode-uri: 3.0.8
 
@@ -5173,7 +5178,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.7.0):
     dependencies:
       eslint: 9.7.0
-      semver: 7.6.2
+      semver: 7.6.3
 
   eslint-plugin-deprecation@3.0.0(eslint@9.7.0)(typescript@5.5.3):
     dependencies:
@@ -5208,9 +5213,9 @@ snapshots:
       eslint: 9.7.0
       esquery: 1.6.0
       parse-imports: 2.1.1
-      semver: 7.6.2
+      semver: 7.6.3
       spdx-expression-parse: 4.0.0
-      synckit: 0.9.0
+      synckit: 0.9.1
     transitivePeerDependencies:
       - supports-color
 
@@ -5242,7 +5247,7 @@ snapshots:
       globals: 15.5.0
       ignore: 5.3.1
       minimatch: 9.0.5
-      semver: 7.6.2
+      semver: 7.6.3
 
   eslint-plugin-no-only-tests@3.1.0: {}
 
@@ -5516,7 +5521,7 @@ snapshots:
   git-semver-tags@7.0.1:
     dependencies:
       meow: 12.1.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   git-up@7.0.0:
     dependencies:
@@ -5910,7 +5915,7 @@ snapshots:
       acorn: 8.12.1
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   jsonc-parser@3.2.1: {}
 
@@ -6074,7 +6079,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   map-obj@1.0.1: {}
 
@@ -6248,14 +6253,14 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.13.1
-      semver: 7.6.2
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@6.0.0:
     dependencies:
       hosted-git-info: 7.0.1
       is-core-module: 2.13.1
-      semver: 7.6.2
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   normalize-path@3.0.0: {}
@@ -6280,7 +6285,7 @@ snapshots:
       log-symbols: 4.1.0
       meow: 9.0.0
       plur: 4.0.0
-      semver: 7.6.2
+      semver: 7.6.3
       slash: 3.0.0
       strip-json-comments: 3.1.1
       type-fest: 4.21.0
@@ -6413,7 +6418,7 @@ snapshots:
       got: 12.6.1
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.6.2
+      semver: 7.6.3
 
   parent-module@1.0.1:
     dependencies:
@@ -6516,10 +6521,10 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@2.5.0(prettier@3.3.3):
+  prettier-plugin-packagejson@2.5.1(prettier@3.3.3):
     dependencies:
       sort-package-json: 2.10.0
-      synckit: 0.9.0
+      synckit: 0.9.1
     optionalDependencies:
       prettier: 3.3.3
 
@@ -6752,11 +6757,13 @@ snapshots:
 
   semver-diff@4.0.0:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   semver@5.7.2: {}
 
   semver@7.6.2: {}
+
+  semver@7.6.3: {}
 
   sentences-per-line@0.2.1:
     dependencies:
@@ -6830,7 +6837,7 @@ snapshots:
       git-hooks-list: 3.1.0
       globby: 13.2.2
       is-plain-obj: 4.1.0
-      semver: 7.6.2
+      semver: 7.6.3
       sort-object-keys: 1.1.3
 
   source-map-js@1.2.0: {}
@@ -6948,7 +6955,7 @@ snapshots:
     dependencies:
       tslib: 2.6.3
 
-  synckit@0.9.0:
+  synckit@0.9.1:
     dependencies:
       '@pkgr/core': 0.1.1
       tslib: 2.6.3
@@ -7094,7 +7101,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.6.2
+      semver: 7.6.3
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
 
