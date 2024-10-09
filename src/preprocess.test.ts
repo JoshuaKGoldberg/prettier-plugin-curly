@@ -136,6 +136,46 @@ _ = {
 };
 `,
 		],
+		[
+			`
+const p = 'test';
+
+
+//pre comment
+//this is another pre comment
+if (a) b;
+//post comment
+
+someOtherCode();
+`,
+			`
+const p = 'test';
+
+
+//pre comment
+//this is another pre comment
+if(a){b}
+//post comment
+
+someOtherCode();
+`,
+		],
+		[
+			`
+// pre comment
+if (a)
+	// inner comment
+	b;
+// post comment
+`,
+			`
+// pre comment
+if(a){
+// inner comment
+b}
+// post comment
+`,
+		],
 	])("%s becomes %s", (input, expected, filepath = "test.ts") => {
 		expect(
 			preprocess(input, {
