@@ -47,21 +47,21 @@
 		"*": "prettier --ignore-unknown --write"
 	},
 	"dependencies": {
-		"@babel/generator": "^7.23.6",
-		"@babel/parser": "^7.22.5",
-		"@babel/traverse": "^7.22.5"
+		"@babel/generator": "^7.25.7",
+		"@babel/parser": "^7.25.8",
+		"@babel/traverse": "^7.25.7"
 	},
 	"devDependencies": {
-		"@babel/types": "^7.22.5",
+		"@babel/types": "^7.25.8",
 		"@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
 		"@eslint/js": "^9.12.0",
-		"@release-it/conventional-changelog": "^8.0.0",
+		"@release-it/conventional-changelog": "^8.0.2",
 		"@types/babel__generator": "^7.6.8",
-		"@types/babel__traverse": "^7.20.1",
-		"@vitest/coverage-v8": "^2.0.0",
+		"@types/babel__traverse": "^7.20.6",
+		"@vitest/coverage-v8": "^2.1.2",
 		"@vitest/eslint-plugin": "^1.1.7",
-		"console-fail-test": "^0.4.0",
-		"cspell": "^8.0.0",
+		"console-fail-test": "^0.5.0",
+		"cspell": "^8.14.4",
 		"eslint": "^9.12.0",
 		"eslint-plugin-jsdoc": "^50.3.1",
 		"eslint-plugin-jsonc": "^2.16.0",
@@ -84,12 +84,12 @@
 		"tsup": "^8.3.0",
 		"typescript": "^5.6.3",
 		"typescript-eslint": "^8.8.1",
-		"vitest": "^2.0.0"
+		"vitest": "^2.1.2"
 	},
 	"peerDependencies": {
 		"prettier": "^2 || ^3"
 	},
-	"packageManager": "pnpm@9.5.0",
+	"packageManager": "pnpm@9.12.1",
 	"engines": {
 		"node": ">=18"
 	},
