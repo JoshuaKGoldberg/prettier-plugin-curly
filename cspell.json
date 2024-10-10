@@ -21,6 +21,7 @@
 		"outro",
 		"packagejson",
 		"quickstart",
+		"tseslint",
 		"tsup",
 		"wontfix"
 	]

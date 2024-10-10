@@ -1,4 +1,4 @@
-import { ParseAstOptions, parseAst } from "./parseAst.js";
+import { parseAst, ParseAstOptions } from "./parseAst.js";
 import { reprintAst } from "./reprintAst.js";
 import { traverseAndModifyAst } from "./traverseAndModifyAst.js";
 
