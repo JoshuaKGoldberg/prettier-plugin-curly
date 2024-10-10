@@ -38,7 +38,7 @@ npm i prettier-plugin-curly -D
 
 You'll then be able to list it as a [Prettier plugin](https://prettier.io/docs/en/plugins.html) in your [Prettier config](https://prettier.io/docs/en/configuration.html):
 
-```jsonc
+```json
 {
 	"plugins": ["prettier-plugin-curly"]
 }
