@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.2...0.3.0) (2024-10-10)
+
+### Features
+
+- updated Babel dependencies and miscellaneous devDependencies ([#591](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/591)) ([d31eaa4](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/d31eaa40de546f768ec3a7a15ddb7721cefd4597))
+
 ## [0.2.2](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.1...0.2.2) (2024-07-17)
 
 ### Bug Fixes
