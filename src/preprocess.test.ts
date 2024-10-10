@@ -99,7 +99,7 @@ c}`,
 		[`while (a) ;`, `while (a) ;`],
 		[`while (a) b;`, `while(a){b}`],
 		[`while (a) { b; }`, `while (a) { b; }`],
-		[`while (a) <b>c;`, `while(a){(<b>c)}`],
+		[`while (a) <b>c;`, `while(a){<b>c}`],
 		[`while (a) <b />;`, `while(a){<b/>}`, `test.js`],
 		[`while (a) <b />;`, `while(a){<b/>}`, `test.tsx`],
 		[
@@ -109,7 +109,7 @@ while (a) // b
 `,
 			`
 while(a){// b
-(<c>d)}
+<c>d}
 `,
 		],
 
