@@ -16,12 +16,8 @@ export function traverseAndModifyAst(ast: Node) {
 			nodeNotAlreadySeen(node, seenNodes)
 		) {
 			// Remove comments from the original node to avoid duplication
-			if (node.leadingComments) {
-				delete node.leadingComments;
-			}
-			if (node.trailingComments) {
-				delete node.trailingComments;
-			}
+			delete node.leadingComments;
+			delete node.trailingComments;
 
 			modifiedNodes.add(node);
 		}
