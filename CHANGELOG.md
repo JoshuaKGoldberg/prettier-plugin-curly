@@ -1,3 +1,9 @@
+## [0.3.1](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.0...0.3.1) (2024-10-11)
+
+### Bug Fixes
+
+- duplicated comments ([#588](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/588)) ([30a759c](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/30a759c7e3cee795cd104b81aa4c56a7f9afba32)), closes [#399](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/399) [#399](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/399)
+
 # [0.3.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.2...0.3.0) (2024-10-10)
 
 ### Features
