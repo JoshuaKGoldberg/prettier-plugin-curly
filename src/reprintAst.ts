@@ -26,7 +26,10 @@ export function reprintAst(code: string, collectedNodes: CollectibleNode[]) {
 		// See https://github.com/prettier/prettier/issues/9114 for a Prettier AST format API.
 
 		// @ts-ignore
-		output += (generate.default || generate)(collectedNode, printOptions).code;
+		output += (generate.default || generate)(
+			collectedNode,
+			printOptions,
+		).code.trim();
 
 		lastEnd = collectedNode.end!;
 	}

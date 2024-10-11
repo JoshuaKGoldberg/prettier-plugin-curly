@@ -15,6 +15,10 @@ export function traverseAndModifyAst(ast: Node) {
 			modifyNodeIfMissingBrackets(node) &&
 			nodeNotAlreadySeen(node, seenNodes)
 		) {
+			// Remove comments from the original node to avoid duplication
+			delete node.leadingComments;
+			delete node.trailingComments;
+
 			modifiedNodes.add(node);
 		}
 	}
