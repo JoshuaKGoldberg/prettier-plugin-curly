@@ -34,8 +34,8 @@ export function traverseAndModifyAst(ast: Node) {
 		ForOfStatement: collector,
 		ForStatement: collector,
 		IfStatement: collector,
-		WhileStatement: collector,
 		noScope: true,
+		WhileStatement: collector,
 	});
 
 	return modifiedNodes;

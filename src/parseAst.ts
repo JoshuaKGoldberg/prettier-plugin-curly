@@ -1,4 +1,4 @@
-import { ParserOptions, parse } from "@babel/parser";
+import { parse, ParserOptions } from "@babel/parser";
 import { RequiredOptions } from "prettier";
 
 export type ParseAstOptions = Partial<RequiredOptions> &
