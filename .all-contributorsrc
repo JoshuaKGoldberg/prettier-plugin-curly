@@ -72,6 +72,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "robinheidenis",
+      "name": "Robin Heidenis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29160608?v=4",
+      "profile": "https://github.com/RobinHeidenis",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
