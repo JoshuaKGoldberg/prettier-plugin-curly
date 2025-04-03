@@ -16,9 +16,9 @@ const allowedIfAlternateNodeTypes = new Set(["BlockStatement", "IfStatement"]);
 export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 	switch (node.type) {
 		case "DoWhileStatement":
-		case "ForStatement":
 		case "ForInStatement":
 		case "ForOfStatement":
+		case "ForStatement":
 		case "WhileStatement":
 			if (!allowedBodyNodeTypes.has(node.body.type)) {
 				node.body = wrapInBlock(node.body);

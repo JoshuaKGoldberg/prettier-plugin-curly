@@ -24,7 +24,7 @@ export function traverseAndModifyAst(ast: Node) {
 	}
 
 	// @ts-ignore
-	(traverse.default || traverse)(ast, {
+	(traverse.default ?? traverse)(ast, {
 		DoWhileStatement: collector,
 		ForInStatement: collector,
 		ForOfStatement: collector,
@@ -45,7 +45,7 @@ function nodeNotAlreadySeen(node: Node, seenNodes: Set<Node>) {
 	// All child nodes are marked as seen and removed from collections,
 	// so that we don't accidentally print overlapping fixes for them later.
 	// @ts-ignore
-	(traverse.default || traverse)(node, {
+	(traverse.default ?? traverse)(node, {
 		// @ts-ignore
 		enter(path) {
 			seenNodes.add(path.node);

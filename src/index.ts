@@ -9,12 +9,12 @@ import { preprocess } from "./preprocess.js";
 export const parsers = {
 	babel: {
 		// @ts-ignore
-		...(babel.default || babel).parsers.babel,
+		...(babel.default ?? babel).parsers.babel,
 		preprocess,
 	},
 	typescript: {
 		// @ts-ignore
-		...(typescript.default || typescript).parsers.typescript,
+		...(typescript.default ?? typescript).parsers.typescript,
 		preprocess,
 	},
 } satisfies Record<string, Parser>;
