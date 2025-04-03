@@ -8,6 +8,7 @@
 import {
 	blockPrettier,
 	blockPrettierPluginCurly,
+	blockTSup,
 	createConfig,
 } from "create-typescript-app";
 
@@ -16,6 +17,12 @@ export default createConfig({
 		addons: [
 			blockPrettier({
 				plugins: ["./lib/index.js"],
+				runBefore: ["pnpm build --no-dts"],
+			}),
+			blockTSup({
+				properties: {
+					format: ["cjs", "esm"],
+				},
 			}),
 		],
 		blocks: {
