@@ -1,3 +1,11 @@
+# Changelog
+
+## [0.3.2](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.1...0.3.2) (2025-04-03)
+
+### Bug Fixes
+
+- bump to create-typescript-app@2 with transitions action ([#630](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/630)) ([b0c5cbe](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/b0c5cbeb47d15c0bc072232f65fe27063cb3927c)), closes [#629](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/629)
+
 ## [0.3.1](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.0...0.3.1) (2024-10-11)
 
 ### Bug Fixes
@@ -39,5 +47,3 @@
 - correctly handle blockstatement ([#86](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/86)) ([622c259](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/622c25986ea1f5f8c669c3329e16584ffdc10f3e))
 - empty commit to trigger release flow ([6e12092](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/6e120927733279f2b93c5bbf2eef2ff121140316))
 - handle non-block else statements ([881f607](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/881f6077ee74646ab6b6d9540f63c4f8b6ca2544))
-
-# Changelog
