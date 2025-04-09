@@ -59,7 +59,7 @@
 		"@types/babel__generator": "7.6.8",
 		"@types/babel__traverse": "7.20.6",
 		"@types/eslint-plugin-markdown": "2.0.2",
-		"@types/node": "22.13.10",
+		"@types/node": "22.14.0",
 		"@vitest/coverage-v8": "3.1.1",
 		"@vitest/eslint-plugin": "1.1.38",
 		"console-fail-test": "0.5.0",
