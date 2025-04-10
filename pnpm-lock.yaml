@@ -52,8 +52,8 @@ importers:
         specifier: 0.5.0
         version: 0.5.0
       create-typescript-app:
-        specifier: 2.25.0
-        version: 2.25.0(bingo-systems@0.5.4)
+        specifier: 2.26.1
+        version: 2.26.1(bingo-systems@0.5.4)
       cspell:
         specifier: 8.18.0
         version: 8.18.0
@@ -1778,8 +1778,8 @@ packages:
       typescript:
         optional: true
 
-  create-typescript-app@2.25.0:
-    resolution: {integrity: sha512-6bMCxMz3FVrYk2nkcskQM06aNEQp1okWgyX8cF4besdgKWcXYo6bc6dVKDRcUKw3U+xYfIRqxzP4dfhMSBZNUQ==}
+  create-typescript-app@2.26.1:
+    resolution: {integrity: sha512-jcHJhqVu+iP/O484z6fxr/OYarXf1EeYtBi/5jdbWRTfL6J+d4FjtWs9kxrh/7886aA5XH3BOuHuv/1ddy/Psw==}
     engines: {node: '>=18.3.0'}
     hasBin: true
 
@@ -2860,6 +2860,11 @@ packages:
   markdownlint@0.37.4:
     resolution: {integrity: sha512-u00joA/syf3VhWh6/ybVFkib5Zpj2e5KB/cfCei8fkSRuums6nyisTWGqjTWIOFoFwuXoTBQQiqlB4qFKp8ncQ==}
     engines: {node: '>=18'}
+
+  marked@15.0.8:
+    resolution: {integrity: sha512-rli4l2LyZqpQuRve5C0rkn6pj3hT8EWPC+zkAxFTAJLxRbENfTAhEQq9itrmf1Y81QtAX5D/MYlGlIomNgj9lA==}
+    engines: {node: '>= 18'}
+    hasBin: true
 
   mdast-util-from-markdown@0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}
@@ -5675,7 +5680,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.2
 
-  create-typescript-app@2.25.0(bingo-systems@0.5.4):
+  create-typescript-app@2.26.1(bingo-systems@0.5.4):
     dependencies:
       bingo: 0.5.15
       bingo-fs: 0.5.5
@@ -5694,6 +5699,7 @@ snapshots:
       json5: 2.2.3
       lazy-value: 3.0.0
       lodash: 4.17.21
+      marked: 15.0.8
       npm-user: 6.1.1
       object-strings-deep: 0.1.1
       parse-author: 2.0.0
@@ -6941,6 +6947,8 @@ snapshots:
       micromark-util-types: 2.0.1
     transitivePeerDependencies:
       - supports-color
+
+  marked@15.0.8: {}
 
   mdast-util-from-markdown@0.8.5:
     dependencies:
