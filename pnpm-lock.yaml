@@ -52,8 +52,8 @@ importers:
         specifier: 0.5.0
         version: 0.5.0
       create-typescript-app:
-        specifier: 2.29.3
-        version: 2.29.3(bingo-systems@0.5.4)
+        specifier: 2.30.0
+        version: 2.30.0(bingo-systems@0.5.4)
       cspell:
         specifier: 8.18.0
         version: 8.18.0
@@ -1481,11 +1481,11 @@ packages:
     resolution: {integrity: sha512-NQcnlAtnR72Cfn6Y9EWPS3RXAGM+4ndE3BEueLnWOQgj+/Y6kQyhGEiB7cPmi4VeJL+Kcqo/EGyzuF23aIT3Cg==}
     engines: {node: '>=18'}
 
-  bingo-stratum@0.5.10:
-    resolution: {integrity: sha512-Nzuh93WLHp0ngAf/oJq5iWjFdaPRgS6sUq29M4GgRdmSO3ApCeH1nWZTVuGQL5nPsYDFW8+MgWCNpQYbHmCVlQ==}
+  bingo-stratum@0.5.11:
+    resolution: {integrity: sha512-5tmx6zmqDjHyMklhnYsUNyv9aJVxu92kYdUlSs3Jq42w9WVIwCACJatCMUJYDRo6035MXjB6sbUSORT55l/qBg==}
     engines: {node: '>=18'}
     peerDependencies:
-      bingo: ^0.5.13
+      bingo: ^0.5.14
       bingo-fs: ^0.5.5
       bingo-systems: ^0.5.4
       zod: ^3.24.2
@@ -1778,8 +1778,8 @@ packages:
       typescript:
         optional: true
 
-  create-typescript-app@2.29.3:
-    resolution: {integrity: sha512-C1C/P1IFMD26ZrIEPW7+i1p3oCSFieYosVUP0mRHVvYMczyk8QLu1d426DMgSn/2zdmmh6aTkH6d7WC4EVtrOA==}
+  create-typescript-app@2.30.0:
+    resolution: {integrity: sha512-XWFYMHcZ0VUCa4gj+DI2I3LjcgWJhhhrRRj2tPeXVYMf/F4eoRVmevvyu9aRm98TYfUN2cAWHCruTJ4VEVyFFg==}
     engines: {node: '>=18.3.0'}
     hasBin: true
 
@@ -5357,7 +5357,7 @@ snapshots:
     dependencies:
       '@octokit/types': 13.10.0
 
-  bingo-stratum@0.5.10(bingo-fs@0.5.5)(bingo-systems@0.5.4)(bingo@0.5.15)(zod@3.24.2):
+  bingo-stratum@0.5.11(bingo-fs@0.5.5)(bingo-systems@0.5.4)(bingo@0.5.15)(zod@3.24.2):
     dependencies:
       all-properties-lazy: 0.1.0
       bingo: 0.5.15
@@ -5681,11 +5681,11 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.2
 
-  create-typescript-app@2.29.3(bingo-systems@0.5.4):
+  create-typescript-app@2.30.0(bingo-systems@0.5.4):
     dependencies:
       bingo: 0.5.15
       bingo-fs: 0.5.5
-      bingo-stratum: 0.5.10(bingo-fs@0.5.5)(bingo-systems@0.5.4)(bingo@0.5.15)(zod@3.24.2)
+      bingo-stratum: 0.5.11(bingo-fs@0.5.5)(bingo-systems@0.5.4)(bingo@0.5.15)(zod@3.24.2)
       cached-factory: 0.1.0
       cspell-populate-words: 0.3.0
       execa: 9.5.2
