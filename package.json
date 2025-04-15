@@ -81,7 +81,7 @@
 		"markdownlint-cli": "0.44.0",
 		"prettier": "3.5.3",
 		"prettier-plugin-packagejson": "2.5.10",
-		"prettier-plugin-sh": "0.16.0",
+		"prettier-plugin-sh": "0.17.0",
 		"release-it": "18.1.2",
 		"sentences-per-line": "0.3.0",
 		"tsup": "8.4.0",
