@@ -13,7 +13,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
 	{
-		ignores: ["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml"],
+		ignores: ["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml",'src/is-ignored.mjs'],
 	},
 	{ linterOptions: { reportUnusedDisableDirectives: "error" } },
 	eslint.configs.recommended,

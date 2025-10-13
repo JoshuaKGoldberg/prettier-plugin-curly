@@ -3,3 +3,4 @@
 /coverage
 /lib
 /pnpm-lock.yaml
+/src/is-ignored.mjs
