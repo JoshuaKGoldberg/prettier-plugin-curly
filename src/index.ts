@@ -1,28 +1,12 @@
-import { AstPath } from './../../prettier/src/index.d';
-// CJS/ESM 🫠
-/* eslint-disable @typescript-eslint/ban-ts-comment, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access */
-import {type Printer} from "prettier";
-import * as estree from "prettier/plugins/estree";
+/*
+After we drop support for Prettier<v3.7.0
+We can remove all exports except the parser
+*/
+import * as babel from "prettier/parser-babel";
+import * as typescript from "prettier/parser-typescript";
 
-import {modifyNodeIfMissingBrackets}from './isNodeMissingBrackets'
-
-
-// @ts-ignore
-const estreePrinter = estree.printers.estree
-
-export const printers = {
-	estree: {
-		...estreePrinter,
-		print(path: AstPath<>, options, print, args) {
-			modifyNodeIfMissingBrackets(path)
-
-			const doc = estreePrinter.print(path, options, print, args);
-
-
-			return doc;
-		}
-	}
-
-} satisfies Record<string, Printer>;
-
-/* eslint-enable */
+export const parsers = {
+	...babel.parsers,
+  ...typescript.parsers
+}
+export {printers} from './printers.js'

@@ -79,7 +79,7 @@
 		"lint-staged": "16.2.0",
 		"markdownlint": "0.38.0",
 		"markdownlint-cli": "0.45.0",
-		"prettier": "https://pkg.pr.new/prettier@18071",
+		"prettier": "3.6.0",
 		"prettier-plugin-packagejson": "2.5.10",
 		"prettier-plugin-sh": "0.18.0",
 		"release-it": "19.0.1",

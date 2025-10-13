@@ -6,6 +6,8 @@ yarn esbuild src/language-js/utils/is-ignored.js --bundle --format=esm
 ```
 */
 
+// @ts-nocheck
+
 // src/utils/is-non-empty-array.js
 function isNonEmptyArray(object) {
   return Array.isArray(object) && object.length > 0;
