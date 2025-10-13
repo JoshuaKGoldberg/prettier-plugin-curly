@@ -578,3 +578,22 @@ if (a) {
 // post comment
 "
 `;
+
+exports[`Tests > case 44`] = `
+"
+------------------------------------ Input -------------------------------------
+
+// prettier-ignore
+function ignored() {
+    if(foo  .bar)
+        return
+}
+
+------------------------------------ Output ------------------------------------
+// prettier-ignore
+function ignored() {
+    if(foo  .bar)
+        return
+}
+"
+`;

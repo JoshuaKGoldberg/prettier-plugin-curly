@@ -6,7 +6,6 @@ import * as estree from "prettier/plugins/estree";
 
 import type{ CollectibleNode } from "./types.js";
 
-import isIgnored from './is-ignored.js'
 import {modifyNodeIfMissingBrackets}from './modifyNodeIfMissingBrackets.js'
 
 // @ts-ignore
@@ -16,10 +15,7 @@ export const printers = {
 	estree: {
 		...estreePrinter,
 		print(path: AstPath<CollectibleNode>, options, print, args) {
-			// TODO: Remove this `isIgnored` check we drop support for Prettier<v3.7.0 
-      if (!isIgnored(path)) {
-        modifyNodeIfMissingBrackets(path)
-      }
+      modifyNodeIfMissingBrackets(path)
 
       // @ts-ignore
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-return

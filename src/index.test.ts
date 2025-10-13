@@ -1,6 +1,7 @@
-import { describe, expect, test } from "vitest";
 import * as prettier from 'prettier'
-import * as plugin from './index'
+import { describe, expect, test } from "vitest";
+
+import * as plugin from './index.js'
 
 function format(code: string, options: prettier.Options) {
 	return prettier.format(code, {
@@ -184,6 +185,17 @@ b}
 // post comment
 `,
 		],
+// #625
+		[
+`
+// prettier-ignore
+function ignored() {
+    if(foo  .bar)
+        return
+}
+`,
+'To be filled'
+]
 	])("case", async(input, expected, filepath = "test.ts") => {
 		const output = await format(input, {filepath})
 		const snapshot = `
