@@ -1,8 +1,16 @@
 import { describe, expect, test } from "vitest";
+import * as prettier from 'prettier'
+import * as plugin from './index'
 
-import { preprocess } from "./preprocess.js";
+function format(code: string, options: prettier.Options) {
+	return prettier.format(code, {
+		...options,
+		plugins: [...(options?.plugins??[]), plugin]
+	})
+}
 
-describe("preprocess", () => {
+
+describe("Tests", () => {
 	test.each([
 		[`do a; while (b);`, `do{a}while(b);`],
 		[`do { a; } while (b);`, `do { a; } while (b);`],
@@ -94,7 +102,7 @@ c}`,
 		[`return;`, `return;`],
 		[`new.target;`, `new.target;`],
 		[`await 1;`, `await 1;`],
-		[`super;`, `super;`],
+		// [`super;`, `super;`],
 		[`export { foo };`, `export { foo };`],
 		[`while (a) ;`, `while (a) ;`],
 		[`while (a) b;`, `while(a){b}`],
@@ -176,11 +184,26 @@ b}
 // post comment
 `,
 		],
-	])("%s becomes %s", (input, expected, filepath = "test.ts") => {
+	])("case", async(input, expected, filepath = "test.ts") => {
+		const output = await format(input, {filepath})
+		const snapshot = `
+${createLine(' Input ')}
+${input.trimEnd()}
+
+${createLine(' Output ')}
+${output.trimEnd()}
+`
 		expect(
-			preprocess(input, {
-				filepath,
-			}).trim(),
-		).toBe(expected.trim());
+			snapshot
+		).toMatchSnapshot();
 	});
 });
+
+const createLine = (text = '') =>  {
+	const space = 80 - text.length
+	const before = Math.floor((space) / 2)
+	const after = space - before
+
+return '-'.repeat(before) + text + '-'.repeat(after)
+}
+

@@ -1,4 +1,5 @@
-import { BlockStatement, Statement } from "@babel/types";
+import type { BlockStatement, Statement } from "@babel/types";
+import type { AstPath} from "prettier" 
 
 import { CollectibleNode } from "./types.js";
 
@@ -13,7 +14,9 @@ function wrapInBlock(node: Statement): BlockStatement {
 const allowedBodyNodeTypes = new Set(["BlockStatement", "EmptyStatement"]);
 const allowedIfAlternateNodeTypes = new Set(["BlockStatement", "IfStatement"]);
 
-export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
+export function modifyNodeIfMissingBrackets(path: AstPath<CollectibleNode>) {
+	const {node} = path
+
 	switch (node.type) {
 		case "DoWhileStatement":
 		case "ForInStatement":
@@ -22,17 +25,13 @@ export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 		case "WhileStatement":
 			if (!allowedBodyNodeTypes.has(node.body.type)) {
 				node.body = wrapInBlock(node.body);
-				return true;
 			}
 
 			break;
 
 		case "IfStatement": {
-			let modified: true | undefined;
-
 			if (!allowedBodyNodeTypes.has(node.consequent.type)) {
 				node.consequent = wrapInBlock(node.consequent);
-				modified = true;
 			}
 
 			if (
@@ -40,12 +39,9 @@ export function modifyNodeIfMissingBrackets(node: CollectibleNode) {
 				!allowedIfAlternateNodeTypes.has(node.alternate.type)
 			) {
 				node.alternate = wrapInBlock(node.alternate);
-				modified = true;
 			}
 
-			return modified;
 		}
 	}
-
-	return false;
 }
+
