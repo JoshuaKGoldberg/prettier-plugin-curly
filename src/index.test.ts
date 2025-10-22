@@ -6,24 +6,19 @@ import * as plugin from "./index.js";
 function format(code: string, options: prettier.Options) {
 	return prettier.format(code, {
 		...options,
-		plugins: [...(options.plugins ?? []), plugin],
+		plugins: [plugin],
 	});
 }
 
 describe("Tests", () => {
 	test.each([
-		[`do a; while (b);`, `do{a}while(b);`],
-		[`do { a; } while (b);`, `do { a; } while (b);`],
+		[`do a; while (b);`],
+		[`do { a; } while (b);`],
 		[
 			`
 do
 /* a */
 b; while (c)
-`,
-			`
-do{
-/* a */
-b}while(c);
 `,
 		],
 		[
@@ -31,10 +26,6 @@ b}while(c);
 do /* a */
 b; while (c)
 `,
-			`
-do{/* a */
-b}while(c);
-`,
 		],
 		[
 			`
@@ -42,49 +33,37 @@ do
 //a
 b; while (c)
 `,
-			`
-do{
-//a
-b}while(c);
-`,
 		],
 		[
 			`
 do //a
 b; while (c)
 `,
-			`
-do{//a
-b}while(c);
-`,
 		],
-		[`for (; ; ) ;`, `for (; ; ) ;`],
-		[`for (; ; ) d;`, `for(;;){d}`],
-		[`for (; ; ) { d; }`, `for (; ; ) { d; }`],
-		[`for (a; b; c) d;`, `for(a;b;c){d}`],
-		[`for (a; b; c) { d; }`, `for (a; b; c) { d; }`],
-		[`for (const a in b) c;`, `for(const a in b){c}`],
-		[`for (const a in b) { c; }`, `for (const a in b) { c; }`],
-		[`for (const a of b) c;`, `for(const a of b){c}`],
-		[`for (const a of b) { c; }`, `for (const a of b) { c; }`],
-		[`if (a) b;`, `if(a){b}`],
-		[`if (a) { b; }`, `if (a) { b; }`],
-		[`if (a) b; else c;`, `if(a){b}else{c}`],
-		[`if (a) {} else b;`, `if(a){}else{b}`],
-		[`if (a) b; else { c; }`, `if(a){b}else{c}`],
-		[`if (a) b; else if (b) c;`, `if(a){b}else if(b){c}`],
-		["if (a) if (b) c;", "if(a){if(b){c}}"],
-		["if (a) { if (b) c; }", "if (a) { if(b){c} }"],
-		["if (a) if (b) if (c) d;", "if(a){if(b){if(c){d}}}"],
-		["if (a) if (b) {} else if (c) d;", "if(a){if(b){}else if(c){d}}"],
+		[`for (; ; ) ;`],
+		[`for (; ; ) d;`],
+		[`for (; ; ) { d; }`],
+		[`for (a; b; c) d;`],
+		[`for (a; b; c) { d; }`],
+		[`for (const a in b) c;`],
+		[`for (const a in b) { c; }`],
+		[`for (const a of b) c;`],
+		[`for (const a of b) { c; }`],
+		[`if (a) b;`],
+		[`if (a) { b; }`],
+		[`if (a) b; else c;`],
+		[`if (a) {} else b;`],
+		[`if (a) b; else { c; }`],
+		[`if (a) b; else if (b) c;`],
+		["if (a) if (b) c;"],
+		["if (a) { if (b) c; }"],
+		["if (a) if (b) if (c) d;"],
+		["if (a) if (b) {} else if (c) d;"],
 		[
 			`
 if(a) //b
 c
 `,
-			`
-if(a){//b
-c}`,
 		],
 		[
 			`
@@ -92,32 +71,23 @@ if(a)
 //b
 c
 `,
-			`
-if(a){
-//b
-c}`,
 		],
-		[`let a; let a;`, `let a; let a;`],
-		[`foo; import a from 'bar'`, `foo; import a from 'bar'`],
-		[`return;`, `return;`],
-		[`new.target;`, `new.target;`],
-		[`await 1;`, `await 1;`],
-		// [`super;`, `super;`],
-		[`export { foo };`, `export { foo };`],
-		[`while (a) ;`, `while (a) ;`],
-		[`while (a) b;`, `while(a){b}`],
-		[`while (a) { b; }`, `while (a) { b; }`],
-		[`while (a) <b>c;`, `while(a){<b>c}`],
-		[`while (a) <b />;`, `while(a){<b/>}`, `test.js`],
-		[`while (a) <b />;`, `while(a){<b/>}`, `test.tsx`],
+		[`let a; let a;`],
+		[`foo; import a from 'bar'`],
+		[`return;`],
+		[`new.target;`],
+		[`await 1;`],
+		[`export { foo };`],
+		[`while (a) ;`],
+		[`while (a) b;`],
+		[`while (a) { b; }`],
+		[`while (a) <b>c;`],
+		[`while (a) <b />;`, "test.js"],
+		[`while (a) <b />;`, "test.jsx"],
 		[
 			`
 while (a) // b
 <c> d;
-`,
-			`
-while(a){// b
-<c>d}
 `,
 		],
 
@@ -134,15 +104,6 @@ _ = {
 	c: "d"
 };
 `,
-			`
-if(a){b}
-_ = {
-	a: [
-		"b",
-	],
-	c: "d"
-};
-`,
 		],
 		[
 			`
@@ -156,17 +117,6 @@ if (a) b;
 
 someOtherCode();
 `,
-			`
-const p = 'test';
-
-
-//pre comment
-//this is another pre comment
-if(a){b}
-//post comment
-
-someOtherCode();
-`,
 		],
 		[
 			`
@@ -176,14 +126,8 @@ if (a)
 	b;
 // post comment
 `,
-			`
-// pre comment
-if(a){
-// inner comment
-b}
-// post comment
-`,
 		],
+
 		// #625
 		[
 			`
@@ -193,9 +137,8 @@ function ignored() {
         return
 }
 `,
-			"To be filled",
 		],
-	])("case", async (input, expected, filepath = "test.ts") => {
+	])("%j", async (input, filepath = "test.ts") => {
 		const output = await format(input, { filepath });
 		const snapshot = `
 ${createLine(" Input ")}
