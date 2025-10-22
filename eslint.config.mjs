@@ -9,9 +9,10 @@ import packageJson from "eslint-plugin-package-json";
 import perfectionist from "eslint-plugin-perfectionist";
 import * as regexp from "eslint-plugin-regexp";
 import yml from "eslint-plugin-yml";
+import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
+export default defineConfig(
 	{
 		ignores: ["**/*.snap", "coverage", "lib", "node_modules", "pnpm-lock.yaml"],
 	},
@@ -36,7 +37,6 @@ export default tseslint.config(
 		languageOptions: {
 			parserOptions: {
 				projectService: { allowDefaultProject: ["*.config.*s"] },
-				tsconfigRootDir: import.meta.dirname,
 			},
 		},
 		rules: {
