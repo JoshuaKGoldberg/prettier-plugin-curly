@@ -1,5 +1,3 @@
-// CJS/ESM 🫠
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import type { AstPath, Printer } from "prettier";
 
 import * as estree from "prettier/plugins/estree";
@@ -8,8 +6,8 @@ import type { CollectibleNode } from "./types.js";
 
 import { modifyNodeIfMissingBrackets } from "./modifyNodeIfMissingBrackets.js";
 
-// @ts-expect-error -- estree does not provide types for this plugin
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+// @ts-expect-error -- estree does not provide public exports
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 const estreePrinter: Printer = estree.printers.estree;
 
 export const printers = {
@@ -22,5 +20,3 @@ export const printers = {
 		},
 	},
 } satisfies Record<string, Printer>;
-
-/* eslint-enable */
