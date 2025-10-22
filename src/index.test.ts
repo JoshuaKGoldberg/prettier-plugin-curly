@@ -6,7 +6,7 @@ import * as plugin from "./index.js";
 function format(code: string, options: prettier.Options) {
 	return prettier.format(code, {
 		...options,
-		plugins: [...(options?.plugins ?? []), plugin],
+		plugins: [...(options.plugins ?? []), plugin],
 	});
 }
 
