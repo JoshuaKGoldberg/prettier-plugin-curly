@@ -1,5 +1,11 @@
 # Changelog
 
+# [0.4.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.2...0.4.0) (2025-10-22)
+
+### Features
+
+- completely rewrite plugin to export a wrapped printers.estree ([#835](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/835)) ([1ab58be](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/1ab58be5a12877b7c1f19477bf997a297f3a0215)), closes [#625](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/625)
+
 ## [0.3.2](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.1...0.3.2) (2025-04-03)
 
 ### Bug Fixes
