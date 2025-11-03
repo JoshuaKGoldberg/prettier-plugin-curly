@@ -84,6 +84,15 @@
         "tool",
         "code"
       ]
+    },
+    {
+      "login": "drake-nathan",
+      "name": "Nathan Drake",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22569638?v=4",
+      "profile": "http://www.nathandrake.dev",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
