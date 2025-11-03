@@ -1,7 +1,6 @@
 {
 	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
-		".all-contributorsrc",
 		".github",
 		"CHANGELOG.md",
 		"coverage",
