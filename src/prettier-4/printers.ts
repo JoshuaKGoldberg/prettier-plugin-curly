@@ -12,7 +12,7 @@ import { modifyPathIfMissingBrackets } from "./modifyPathIfMissingBrackets.js";
 const estreePrinter: Printer = estree.printers.estree;
 
 export const printers = {
-	mdast: {
+	estree: {
 		...estreePrinter,
 		print(path: AstPath<CollectibleNode>, options, print, args) {
 			if (!isPrettier4(options)) {
