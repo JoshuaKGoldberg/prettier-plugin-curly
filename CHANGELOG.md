@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.1](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.4.0...0.4.1) (2025-11-26)
+
+### Bug Fixes
+
+- build import path, drop support for Prettier 2 ([#876](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/876)) ([a04848d](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/a04848d8b16aeccffdd8c21937593990f733058e)), closes [#865](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/865) [#867](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/867)
+
 # [0.4.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.2...0.4.0) (2025-10-22)
 
 ### Features
