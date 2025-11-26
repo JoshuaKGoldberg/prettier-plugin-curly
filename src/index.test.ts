@@ -72,6 +72,12 @@ if(a)
 c
 `,
 		],
+		[
+			`
+if (!'+-×*/÷'.includes(ch))
+  continue;
+`,
+		],
 		[`let a; let a;`],
 		[`foo; import a from 'bar'`],
 		[`return;`],
