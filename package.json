@@ -19,17 +19,17 @@
 				"default": "./lib/index.mjs"
 			},
 			"require": {
-				"types": "./lib/index.d.ts",
-				"default": "./lib/index.js"
+				"types": "./lib/index.d.cts",
+				"default": "./lib/index.cjs"
 			}
 		}
 	},
-	"main": "lib/index.js",
+	"main": "lib/index.cjs",
 	"files": [
 		"lib/"
 	],
 	"scripts": {
-		"build": "tsup",
+		"build": "tsdown",
 		"format": "prettier . --write",
 		"lint": "eslint . --max-warnings 0",
 		"lint:knip": "knip",
@@ -74,7 +74,7 @@
 		"prettier-plugin-sh": "0.18.0",
 		"release-it": "19.0.5",
 		"sentences-per-line": "0.3.0",
-		"tsup": "8.5.0",
+		"tsdown": "0.16.7",
 		"typescript": "5.9.3",
 		"typescript-eslint": "8.47.0",
 		"vitest": "4.0.1"

@@ -22,7 +22,6 @@
 		"packagejson",
 		"quickstart",
 		"tseslint",
-		"tsup",
 		"wontfix"
 	]
 }
