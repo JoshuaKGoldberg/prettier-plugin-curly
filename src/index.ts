@@ -1,5 +1,5 @@
-import * as babel from "prettier/parser-babel";
-import * as typescript from "prettier/parser-typescript";
+import * as babel from "prettier/plugins/babel";
+import * as typescript from "prettier/plugins/typescript";
 
 /**
  * @deprecated These are only exposed for Prettier@<3.7.0.
