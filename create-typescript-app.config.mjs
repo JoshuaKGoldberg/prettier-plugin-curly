@@ -16,7 +16,7 @@ export default createConfig({
 	refinements: {
 		addons: [
 			blockPrettier({
-				plugins: ["./lib/index.js"],
+				plugins: ["./lib/index.mjs"],
 				runBefore: ["pnpm build --no-dts"],
 			}),
 			blockTSDown({
