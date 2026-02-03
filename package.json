@@ -44,7 +44,7 @@
 		"*": "prettier --ignore-unknown --write"
 	},
 	"devDependencies": {
-		"@babel/types": "7.28.4",
+		"@babel/types": "7.29.0",
 		"@eslint-community/eslint-plugin-eslint-comments": "4.6.0",
 		"@eslint/js": "9.39.0",
 		"@release-it/conventional-changelog": "10.0.1",
