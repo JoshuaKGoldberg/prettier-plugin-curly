@@ -57,7 +57,7 @@
 		"cspell": "9.6.0",
 		"eslint": "10.0.0",
 		"eslint-plugin-jsdoc": "62.7.0",
-		"eslint-plugin-jsonc": "2.21.0",
+		"eslint-plugin-jsonc": "3.0.0",
 		"eslint-plugin-markdown": "5.1.0",
 		"eslint-plugin-n": "17.24.0",
 		"eslint-plugin-package-json": "0.88.0",
