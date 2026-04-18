@@ -72,7 +72,7 @@
 		"prettier": "3.8.0",
 		"prettier-plugin-packagejson": "3.0.0",
 		"prettier-plugin-sh": "0.18.0",
-		"release-it": "19.2.0",
+		"release-it": "20.0.0",
 		"sentences-per-line": "0.3.0",
 		"tsdown": "0.21.0",
 		"typescript": "6.0.2",
