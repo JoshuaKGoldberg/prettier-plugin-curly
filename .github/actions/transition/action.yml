@@ -15,7 +15,7 @@ runs:
         commit_user_email: bot@create.bingo
         commit_user_name: The Friendly Bingo Bot
     - if: steps.auto-commit-action.outputs.changes_detected == 'true'
-      uses: mshick/add-pr-comment@be5d48d9b695983ee841f45434104a1419ba6231 # v3
+      uses: mshick/add-pr-comment@8e4927817251f1ff60c001f04568532b38e0b4a0 # v3
       with:
         issue: ${{ github.event.pull_request.number }}
         message: |-
