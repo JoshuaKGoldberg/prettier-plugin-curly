@@ -74,7 +74,7 @@
 		"prettier-plugin-sh": "0.19.0",
 		"release-it": "21.0.0",
 		"sentences-per-line": "0.3.0",
-		"tsdown": "0.22.0",
+		"tsdown": "0.23.0",
 		"typescript": "6.0.2",
 		"typescript-eslint": "8.69.0",
 		"vitest": "5.0.0"
