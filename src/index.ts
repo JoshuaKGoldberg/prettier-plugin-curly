@@ -29,11 +29,13 @@ async function createOxcParser(name: "oxc" | "oxc-ts"): Promise<Parser> {
 }
 
 export const parsers: Record<string, Parser> = {
+	// Babel and TypeScript parser exports support Prettier <3.7.0.
+	// https://github.com/prettier/prettier/pull/18072
 	...babel.parsers,
 	...typescript.parsers,
-	// @ts-expect-error -- Prettier supports parser initializers without public types
+	// @ts-expect-error -- Prettier calls lazy parser factories, but its types only accept Parser objects
 	oxc: () => createOxcParser("oxc"),
-	// @ts-expect-error -- Prettier supports parser initializers without public types
+	// @ts-expect-error -- Prettier calls lazy parser factories, but its types only accept Parser objects
 	"oxc-ts": () => createOxcParser("oxc-ts"),
 };
 

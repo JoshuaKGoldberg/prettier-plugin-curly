@@ -23,7 +23,7 @@ function withCurly(printer: Printer): Printer {
 
 export const printers: Record<string, Printer> = {
 	estree: withCurly(estreePrinter),
-	// @ts-expect-error -- Prettier supports printer initializers without public types
+	// @ts-expect-error -- Prettier calls lazy printer factories, but its types only accept Printer objects
 	"estree-oxc": async () => {
 		const oxc = await import("@prettier/plugin-oxc");
 		return withCurly(oxc.printers["estree-oxc"]);

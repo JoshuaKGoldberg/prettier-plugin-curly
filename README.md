@@ -45,6 +45,10 @@ As a result, Prettier will add `{}` curly brackets to control flow statements su
 
 ### Oxc
 
+The `oxc` and `oxc-ts` parsers require Prettier 3.7.0 or later.
+Combining `@prettier/plugin-oxc` with older Prettier versions is unsupported because Oxc's printer relies on the comment-handling API available in Prettier 3.7.0.
+Formatting with Babel or TypeScript parsers supports earlier Prettier 3 versions.
+
 To use [Prettier's Oxc plugin](https://github.com/prettier/prettier/tree/main/packages/plugin-oxc), install `@prettier/plugin-oxc` alongside this plugin and list `prettier-plugin-curly` after it:
 
 ```json
