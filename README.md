@@ -43,6 +43,20 @@ As a result, Prettier will add `{}` curly brackets to control flow statements su
 + }
 ```
 
+### Oxc
+
+To use [Prettier's Oxc plugin](https://github.com/prettier/prettier/tree/main/packages/plugin-oxc), install `@prettier/plugin-oxc` alongside this plugin and list `prettier-plugin-curly` after it:
+
+```json
+{
+	"plugins": ["@prettier/plugin-oxc", "prettier-plugin-curly"]
+}
+```
+
+If other plugins preprocess Oxc input, such as import-sorting plugins, list them before `prettier-plugin-curly` as well.
+Their preprocessors run before curly brackets are added.
+`@prettier/plugin-oxc` is an optional peer dependency and is only loaded when formatting with the `oxc` or `oxc-ts` parser.
+
 ### But Why?
 
 Prettier generally does not modify the structure of code: which includes [not enforcing curly brackets](https://github.com/prettier/prettier/issues/7659) to match [ESLint's `curly` rule](https://eslint.org/docs/latest/rules/curly).

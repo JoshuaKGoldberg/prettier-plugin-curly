@@ -1,3 +1,4 @@
+import * as oxc from "@prettier/plugin-oxc";
 import * as prettier from "prettier";
 import { describe, expect, test } from "vitest";
 
@@ -6,9 +7,60 @@ import * as plugin from "./index.js";
 function format(code: string, options: prettier.Options) {
 	return prettier.format(code, {
 		...options,
-		plugins: [plugin],
+		plugins: [...(options.plugins ?? []), plugin],
 	});
 }
+
+describe.each(["oxc", "oxc-ts"] as const)("%s", (parser) => {
+	test.each([
+		[
+			"if (ready) run(); else stop();",
+			"if (ready) {\n  run();\n} else {\n  stop();\n}\n",
+		],
+		[
+			"for (let index = 0; index < 3; index++) run(index);",
+			"for (let index = 0; index < 3; index++) {\n  run(index);\n}\n",
+		],
+		[
+			"for (const item of items) run(item);",
+			"for (const item of items) {\n  run(item);\n}\n",
+		],
+		[
+			"for (const key in object) run(key);",
+			"for (const key in object) {\n  run(key);\n}\n",
+		],
+		["while (ready) run();", "while (ready) {\n  run();\n}\n"],
+		["do run(); while (ready);", "do {\n  run();\n} while (ready);\n"],
+		["while (ready);", "while (ready);\n"],
+		[
+			"// prettier-ignore\nif (ready) run();",
+			"// prettier-ignore\nif (ready) run();\n",
+		],
+		[
+			"if (ready) /* before */ run(); // after",
+			"if (ready) {\n  /* before */ run();\n} // after\n",
+		],
+	])("%s", async (input, expected) => {
+		expect(await format(input, { parser, plugins: [oxc] })).toBe(expected);
+	});
+
+	test("preserves an earlier parser's preprocessor", async () => {
+		const preprocessingPlugin: prettier.Plugin = {
+			parsers: {
+				[parser]: {
+					...oxc.parsers[parser],
+					preprocess: (text) => text.replace("ready", "isReady"),
+				},
+			},
+		};
+		expect(
+			await format("if (ready) run();", {
+				parser,
+				plugins: [oxc, preprocessingPlugin],
+			}),
+		).toBe("if (isReady) {\n  run();\n}\n");
+	});
+});
 
 describe("Tests", () => {
 	test.each([
