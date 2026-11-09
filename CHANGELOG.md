@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.2](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.4.1...0.4.2) (2026-11-09)
+
+### Bug Fixes
+
+- support Oxc parsers ([#1255](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/1255)) ([140be9d](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/140be9d870f99539528b17d6b8c3a5164307b0b1)), closes [#000](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/000)
+
 ## [0.4.1](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.4.0...0.4.1) (2025-11-26)
 
 ### Bug Fixes
