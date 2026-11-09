@@ -92,8 +92,5 @@
 	"packageManager": "pnpm@12.18.0",
 	"engines": {
 		"node": ">=18"
-	},
-	"publishConfig": {
-		"provenance": true
 	}
 }
