@@ -10,13 +10,22 @@ import { modifyNodeIfMissingBrackets } from "./modifyNodeIfMissingBrackets.js";
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 const estreePrinter: Printer = estree.printers.estree;
 
-export const printers = {
-	estree: {
-		...estreePrinter,
+function withCurly(printer: Printer): Printer {
+	return {
+		...printer,
 		print(path: AstPath<CollectibleNode>, options, print, args) {
 			modifyNodeIfMissingBrackets(path);
 
-			return estreePrinter.print(path, options, print, args);
+			return printer.print(path, options, print, args);
 		},
+	};
+}
+
+export const printers: Record<string, Printer> = {
+	estree: withCurly(estreePrinter),
+	// @ts-expect-error -- Prettier calls lazy printer factories, but its types only accept Printer objects
+	"estree-oxc": async () => {
+		const oxc = await import("@prettier/plugin-oxc");
+		return withCurly(oxc.printers["estree-oxc"]);
 	},
-} satisfies Record<string, Printer>;
+};
