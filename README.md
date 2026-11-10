@@ -43,6 +43,10 @@ As a result, Prettier will add `{}` curly brackets to control flow statements su
 + }
 ```
 
+List `prettier-plugin-curly` after plugins that change how JavaScript, TypeScript, or JSON is parsed, such as import-sorting, `package.json`-sorting, and JSDoc plugins.
+Their parsers and preprocessors run before curly brackets are added.
+`prettier-plugin-tailwindcss` can also be listed after this plugin, as its documentation requires.
+
 ### Oxc
 
 The `oxc` and `oxc-ts` parsers require Prettier 3.7.0 or later.
