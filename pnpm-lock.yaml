@@ -245,14 +245,14 @@ importers:
         specifier: 0.50.0
         version: 0.50.0
       prettier:
-        specifier: 3.8.0
-        version: 3.8.0
+        specifier: 3.10.0
+        version: 3.10.0
       prettier-plugin-packagejson:
         specifier: 3.1.0
-        version: 3.1.0(prettier@3.8.0)
+        version: 3.1.0(prettier@3.10.0)
       prettier-plugin-sh:
         specifier: 0.20.0
-        version: 0.20.0(prettier@3.8.0)
+        version: 0.20.0(prettier@3.10.0)
       release-it:
         specifier: 21.1.0
         version: 21.1.0(@types/node@26.6.5)(magicast@0.5.5)
@@ -3520,8 +3520,8 @@ packages:
     peerDependencies:
       prettier: ^3.6.0
 
-  prettier@3.8.0:
-    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
+  prettier@3.10.0:
+    resolution: {integrity: sha512-mBi4765LgjO1PFjlEs7pUeK0nb1bw71c+N4/ItfeUWNdY5cV2pRKaFpbbFRYmDJMO+5ZwzGxHRqHxFZna7iv5w==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7515,19 +7515,19 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@3.1.0(prettier@3.8.0):
+  prettier-plugin-packagejson@3.1.0(prettier@3.10.0):
     dependencies:
       sort-package-json: 4.1.0
     optionalDependencies:
-      prettier: 3.8.0
+      prettier: 3.10.0
 
-  prettier-plugin-sh@0.20.0(prettier@3.8.0):
+  prettier-plugin-sh@0.20.0(prettier@3.10.0):
     dependencies:
       '@reteps/dockerfmt': 0.5.4
-      prettier: 3.8.0
+      prettier: 3.10.0
       sh-syntax: 0.7.0
 
-  prettier@3.8.0: {}
+  prettier@3.10.0: {}
 
   pretty-ms@9.3.1:
     dependencies:
