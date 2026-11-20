@@ -1,5 +1,8 @@
 import * as oxc from "@prettier/plugin-oxc";
 import * as prettier from "prettier";
+import * as packageJson from "prettier-plugin-packagejson";
+import * as babel from "prettier/plugins/babel";
+import * as typescript from "prettier/plugins/typescript";
 import { describe, expect, test } from "vitest";
 
 import * as plugin from "./index.js";
@@ -43,23 +46,47 @@ describe.each(["oxc", "oxc-ts"] as const)("%s", (parser) => {
 	])("%s", async (input, expected) => {
 		expect(await format(input, { parser, plugins: [oxc] })).toBe(expected);
 	});
+});
 
-	test("preserves an earlier parser's preprocessor", async () => {
-		const preprocessingPlugin: prettier.Plugin = {
-			parsers: {
-				[parser]: {
-					...oxc.parsers[parser],
-					preprocess: (text) => text.replace("ready", "isReady"),
-				},
+describe.each([
+	["babel", babel.parsers.babel],
+	["babel-ts", babel.parsers["babel-ts"]],
+	["typescript", typescript.parsers.typescript],
+	["oxc", oxc.parsers.oxc],
+	["oxc-ts", oxc.parsers["oxc-ts"]],
+] as const)("%s parser composition", (parser, originalParser) => {
+	test.each([
+		[
+			"preprocess",
+			{ preprocess: (text: string) => text.replace("ready", "isReady") },
+		],
+		[
+			"parse",
+			{
+				parse: (text: string, options: prettier.ParserOptions): unknown =>
+					originalParser.parse(text.replace("ready", "isReady"), options),
 			},
+		],
+	])("preserves an earlier parser's %s", async (_, override) => {
+		const earlierPlugin: prettier.Plugin = {
+			parsers: { [parser]: { ...originalParser, ...override } },
 		};
 		expect(
 			await format("if (ready) run();", {
 				parser,
-				plugins: [oxc, preprocessingPlugin],
+				plugins: [earlierPlugin],
 			}),
 		).toBe("if (isReady) {\n  run();\n}\n");
 	});
+});
+
+test("preserves package.json sorting", async () => {
+	expect(
+		await format('{"version":"1.0.0","name":"example"}', {
+			filepath: "package.json",
+			plugins: [packageJson],
+		}),
+	).toBe('{\n  "name": "example",\n  "version": "1.0.0"\n}\n');
 });
 
 describe("Tests", () => {
