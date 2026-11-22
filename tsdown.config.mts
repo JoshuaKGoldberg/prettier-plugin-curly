@@ -1,10 +1,7 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
-	unbundle: true,
-	clean: true,
-	dts: true,
-	entry: ["src/**/*.ts", "!src/**/*.test.*"],
+	entry: ["src/index.ts"],
 	format: ["cjs", "esm"],
-	outDir: "lib",
+	unbundle: true,
 });

@@ -39,4 +39,4 @@ export const parsers: Record<string, Parser> = {
 	"oxc-ts": () => createOxcParser("oxc-ts"),
 };
 
-export { printers } from "./printers.js";
+export { printers } from "./printers.ts";

@@ -14,9 +14,12 @@ import {
 
 export default createConfig({
 	refinements: {
-		addons: [
+		blocks: {
+			exclude: [blockPrettierPluginCurly],
+		},
+		extensions: [
 			blockPrettier({
-				plugins: ["./lib/index.mjs"],
+				plugins: ["./dist/index.mjs"],
 				runBefore: ["pnpm build --no-dts"],
 			}),
 			blockTSDown({
@@ -25,8 +28,5 @@ export default createConfig({
 				},
 			}),
 		],
-		blocks: {
-			exclude: [blockPrettierPluginCurly],
-		},
 	},
 });

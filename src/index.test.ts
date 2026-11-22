@@ -2,7 +2,7 @@ import * as oxc from "@prettier/plugin-oxc";
 import * as prettier from "prettier";
 import { describe, expect, test } from "vitest";
 
-import * as plugin from "./index.js";
+import * as plugin from "./index.ts";
 
 function format(code: string, options: prettier.Options) {
 	return prettier.format(code, {

@@ -1,9 +1,13 @@
 jobs:
   octoguide:
     if: ${{ !endsWith(github.actor, '[bot]') }}
+    permissions:
+      discussions: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: JoshuaKGoldberg/octoguide@95af986081bee9208897c7ad8e056b19fadf2dc9 # 0.33.0
+      - uses: JoshuaKGoldberg/octoguide@0.33.1
         with:
           config: strict
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -20,7 +24,7 @@ on:
       - created
       - deleted
       - edited
-  issue_comment:
+  issue_comment: # zizmor: ignore[dangerous-triggers]
     types:
       - created
       - deleted
@@ -34,12 +38,7 @@ on:
       - created
       - deleted
       - edited
-  pull_request_target:
+  pull_request_target: # zizmor: ignore[dangerous-triggers]
     types:
       - edited
       - opened
-
-permissions:
-  discussions: write
-  issues: write
-  pull-requests: write

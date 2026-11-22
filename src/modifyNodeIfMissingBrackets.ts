@@ -1,7 +1,7 @@
 import type { BlockStatement, Statement } from "@babel/types";
 import type { AstPath } from "prettier";
 
-import type { CollectibleNode } from "./types.js";
+import type { CollectibleNode } from "./types.ts";
 
 function wrapInBlock(node: Statement): BlockStatement {
 	return {

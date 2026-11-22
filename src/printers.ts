@@ -2,12 +2,10 @@ import type { AstPath, Printer } from "prettier";
 
 import * as estree from "prettier/plugins/estree";
 
-import type { CollectibleNode } from "./types.js";
+import type { CollectibleNode } from "./types.ts";
 
-import { modifyNodeIfMissingBrackets } from "./modifyNodeIfMissingBrackets.js";
+import { modifyNodeIfMissingBrackets } from "./modifyNodeIfMissingBrackets.ts";
 
-// @ts-expect-error -- estree does not provide public exports
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
 const estreePrinter: Printer = estree.printers.estree;
 
 function withCurly(printer: Printer): Printer {
