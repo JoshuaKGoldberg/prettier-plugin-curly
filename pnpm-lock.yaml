@@ -206,8 +206,8 @@ importers:
         specifier: 0.10.0
         version: 0.10.0
       create-typescript-app:
-        specifier: 2.87.3
-        version: 2.87.3(bingo-systems@0.9.1)(typescript@6.0.2)
+        specifier: 2.87.7
+        version: 2.87.7(bingo-systems@0.9.1)(typescript@6.0.2)
       cspell:
         specifier: 10.5.2
         version: 10.5.2
@@ -2181,8 +2181,8 @@ packages:
     engines: {node: '>=22'}
     hasBin: true
 
-  create-typescript-app@2.87.3:
-    resolution: {integrity: sha512-YyQzr2HZInclUGpCuSX7vqj9jme+fsnnnfT9foHFfPGxuDXqFEmMxOTZkKZ8AQebl4B0vIv1OtfP6LrixMqMxQ==}
+  create-typescript-app@2.87.7:
+    resolution: {integrity: sha512-NvtfeJvCnnjK6XUHh2X/hk6JjLavfQKf053hC+eUfpSzShg2Jb1XwtUlAZATMudDPPdHvzHdnpm2yDi3qDKRHg==}
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
     hasBin: true
 
@@ -3343,8 +3343,8 @@ packages:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
 
-  minimatch@11.0.8:
-    resolution: {integrity: sha512-nFQuYSTVrGvysVBps5Ih+0BdnYFN/Cj3C816r6+p7yK+FHrVLGE4O4N9AFwykrlNlvM2HYt+Rad1Uiro6h88Ig==}
+  minimatch@11.0.9:
+    resolution: {integrity: sha512-KCFkfyjqerNlSstjlhIGNXIKZGA/6O4V4RlhZ+Dsr621SPPw0mzlypE9D9ZOoPiVefHID+j7/XuMMlqfD/F60Q==}
     engines: {node: 20 || >=22}
 
   mount-point@3.0.0:
@@ -4868,7 +4868,7 @@ snapshots:
     dependencies:
       '@eslint/object-schema': 3.0.5
       debug: 4.4.3
-      minimatch: 11.0.8
+      minimatch: 11.0.9
     transitivePeerDependencies:
       - supports-color
 
@@ -5734,7 +5734,7 @@ snapshots:
       '@typescript-eslint/types': 8.73.0
       '@typescript-eslint/visitor-keys': 8.73.0
       debug: 4.4.3
-      minimatch: 11.0.8
+      minimatch: 11.0.9
       semver: 7.8.6
       tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@6.0.2)
@@ -6129,7 +6129,7 @@ snapshots:
       conventional-commits-filter: 6.0.1
       conventional-commits-parser: 7.1.4
 
-  create-typescript-app@2.87.3(bingo-systems@0.9.1)(typescript@6.0.2):
+  create-typescript-app@2.87.7(bingo-systems@0.9.1)(typescript@6.0.2):
     dependencies:
       '@prettier/sync': 0.6.1(prettier@3.9.6)
       '@typescript-eslint/typescript-estree': 8.73.0(typescript@6.0.2)
@@ -6151,6 +6151,7 @@ snapshots:
       json5: 2.2.3
       lazy-value: 3.0.0
       marked: 18.2.1
+      minimatch: 11.0.9
       npm-user: 6.1.1
       object-strings-deep: 0.1.2
       parse-author: 2.0.0
@@ -6666,7 +6667,7 @@ snapshots:
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       json-stable-stringify-without-jsonify: 1.0.1
-      minimatch: 11.0.8
+      minimatch: 11.0.9
       natural-compare: 1.4.0
       optionator: 0.9.4
     optionalDependencies:
@@ -7591,7 +7592,7 @@ snapshots:
 
   mimic-function@5.0.1: {}
 
-  minimatch@11.0.8:
+  minimatch@11.0.9:
     dependencies:
       '@isaacs/nonrecursive-glob-match': 1.1.0
       brace-expansion: 5.0.13
