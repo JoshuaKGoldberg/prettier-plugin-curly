@@ -1,11 +1,11 @@
 {
 	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
+		".all-contributorsrc",
 		"/_tmp_*",
 		"CHANGELOG.md",
 		"coverage",
 		"dist",
-		"lib",
 		"node_modules",
 		"pnpm-lock.yaml"
 	],
@@ -21,9 +21,7 @@
 		"conventionalcommits",
 		"knip",
 		"lcov",
-		"markdownlintignore",
 		"mshick",
-		"npmpackagejsonlintrc",
 		"octoguide",
 		"outro",
 		"packagejson",
