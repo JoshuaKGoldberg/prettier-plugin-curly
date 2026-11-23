@@ -1,7 +1,6 @@
 {
 	"dictionaries": ["npm", "node", "typescript"],
 	"ignorePaths": [
-		".all-contributorsrc",
 		"/_tmp_*",
 		"CHANGELOG.md",
 		"coverage",
@@ -15,21 +14,15 @@
 		"MatteoGabriele",
 		"agentscan",
 		"apexskier",
-		"codespace",
-		"commitlint",
-		"contributorsrc",
 		"conventionalcommits",
 		"knip",
 		"lcov",
 		"mshick",
 		"octoguide",
-		"outro",
 		"packagejson",
 		"peakoss",
-		"quickstart",
 		"stefanzweifel",
 		"tseslint",
-		"wontfix",
 		"zizmor",
 		"zizmorcore"
 	]
