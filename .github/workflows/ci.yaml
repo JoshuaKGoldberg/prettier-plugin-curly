@@ -1,4 +1,16 @@
 jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/prepare
+      - run: pnpm build
+      - run: node ./dist/index.mjs
+      - run: node ./dist/index.cjs
+
   ci:
     name: CI
     runs-on: ubuntu-latest
@@ -7,10 +19,7 @@ jobs:
         with:
           persist-credentials: false
       - uses: ./.github/actions/prepare
-      - run: pnpm build
       - parallel:
-          - name: Build
-            run: node ./dist/index.mjs
           - name: Dedupe Check
             run: pnpm dedupe --check
           - name: Lint

@@ -33,7 +33,7 @@ export default defineConfig(
 			tseslint.configs.strictTypeChecked,
 			tseslint.configs.stylisticTypeChecked,
 		],
-		files: ["**/*.{js,mjs,ts}"],
+		files: ["**/*.{js,mjs,mts,ts}"],
 		languageOptions: {
 			parserOptions: {
 				projectService: { allowDefaultProject: ["*.config.*s"] },
