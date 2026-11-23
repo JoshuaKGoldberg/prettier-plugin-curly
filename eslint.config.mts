@@ -40,6 +40,8 @@ export default defineConfig(
 			},
 		},
 		rules: {
+			"jsdoc/text-escaping": "off",
+
 			// Stylistic concerns that don't interfere with Prettier
 			"logical-assignment-operators": [
 				"error",
