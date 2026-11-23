@@ -6,6 +6,7 @@
 // Eventually these values should be inferable, making this config file unnecessary:
 //   https://github.com/JoshuaKGoldberg/bingo/issues/128
 import {
+	blockAllContributors,
 	blockPrettier,
 	blockPrettierPluginCurly,
 	blockTSDown,
@@ -15,7 +16,7 @@ import {
 export default createConfig({
 	refinements: {
 		blocks: {
-			exclude: [blockPrettierPluginCurly],
+			exclude: [blockAllContributors, blockPrettierPluginCurly],
 		},
 		extensions: [
 			blockPrettier({
