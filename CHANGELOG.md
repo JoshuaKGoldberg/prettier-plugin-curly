@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.3](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.4.2...0.4.3) (2026-11-24)
+
+### Bug Fixes
+
+- bump to create-typescript-app@2.87.18 ([#1283](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/1283)) ([0f58fca](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/0f58fcac16ecbcaf9fce894604c473b5230a5b3d)), closes [#1282](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/1282), references [#850](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/850)
+
 ## [0.4.2](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.4.1...0.4.2) (2026-11-09)
 
 ### Bug Fixes
