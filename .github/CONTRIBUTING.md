@@ -10,7 +10,8 @@ This project contains a [Contributor Covenant code of conduct](./CODE_OF_CONDUCT
 
 ## Reporting Issues
 
-Please do [report an issue on the issue tracker](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/new/choose) if there's any bugfix, documentation improvement, or general enhancement you'd like to see in the repository! Please fully fill out all required fields in the most appropriate issue form.
+Please do [report an issue on the issue tracker](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/new/choose) if there's any bugfix, documentation improvement, or general enhancement you'd like to see in the repository!
+Please fully fill out all required fields in the most appropriate issue form.
 
 ## Sending Contributions
 
@@ -24,7 +25,7 @@ There are two steps involved:
 
 With the exception of very small typos, all changes to this repository generally need to correspond to an [unassigned open issue marked as `status: accepting prs` on the issue tracker](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues?q=is%3Aissue+is%3Aopen+label%3A%22status%3A+accepting+prs%22+no%3Aassignee+).
 If this is your first time contributing, consider searching for [unassigned issues that also have the `good first issue` label](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22+label%3A%22status%3A+accepting+prs%22+no%3Aassignee+).
-If the issue you'd like to fix isn't found on the issue, see [Reporting Issues](#reporting-issues) for filing your own (please do!).
+If the issue you'd like to fix isn't found on the issue tracker, see [Reporting Issues](#reporting-issues) for filing your own (please do!).
 
 #### Issue Claiming
 
@@ -84,11 +85,6 @@ We squash merge all commits so there's no need to try to preserve Git history wi
 Once you've addressed all our feedback by making code changes and/or started a followup discussion, [re-request review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews#re-requesting-a-review) from each maintainer whose feedback you addressed.
 
 Once all feedback is addressed and the PR is approved, we'll ensure the branch is up to date with `main` and merge it for you.
-
-#### Post-Merge Recognition
-
-Once your PR is merged, if you haven't yet been added to the [_Contributors_ table in the README.md](../README.md#contributors) for its [type of contribution](https://allcontributors.org/docs/en/emoji-key "Allcontributors emoji key"), you should be soon.
-Please do ping the maintainer who merged your PR if that doesn't happen within 24 hours - it was likely an oversight on our end!
 
 ## Emojis & Appreciation
 

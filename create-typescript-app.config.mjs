@@ -6,6 +6,7 @@
 // Eventually these values should be inferable, making this config file unnecessary:
 //   https://github.com/JoshuaKGoldberg/bingo/issues/128
 import {
+	blockAllContributors,
 	blockPrettier,
 	blockPrettierPluginCurly,
 	blockTSDown,
@@ -14,9 +15,12 @@ import {
 
 export default createConfig({
 	refinements: {
-		addons: [
+		blocks: {
+			exclude: [blockAllContributors, blockPrettierPluginCurly],
+		},
+		extensions: [
 			blockPrettier({
-				plugins: ["./lib/index.mjs"],
+				plugins: ["./dist/index.mjs"],
 				runBefore: ["pnpm build --no-dts"],
 			}),
 			blockTSDown({
@@ -25,8 +29,5 @@ export default createConfig({
 				},
 			}),
 		],
-		blocks: {
-			exclude: [blockPrettierPluginCurly],
-		},
 	},
 });

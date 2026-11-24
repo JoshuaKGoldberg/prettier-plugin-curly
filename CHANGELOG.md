@@ -12,7 +12,7 @@
 
 - build import path, drop support for Prettier 2 ([#876](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/876)) ([a04848d](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/a04848d8b16aeccffdd8c21937593990f733058e)), closes [#865](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/865) [#867](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/867)
 
-# [0.4.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.2...0.4.0) (2025-10-22)
+## [0.4.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.3.2...0.4.0) (2025-10-22)
 
 ### Features
 
@@ -30,7 +30,7 @@
 
 - duplicated comments ([#588](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/588)) ([30a759c](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/30a759c7e3cee795cd104b81aa4c56a7f9afba32)), closes [#399](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/399) [#399](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/issues/399)
 
-# [0.3.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.2...0.3.0) (2024-10-10)
+## [0.3.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.2.2...0.3.0) (2024-10-10)
 
 ### Features
 
@@ -48,7 +48,7 @@
 
 - allow empty statement bodies ([203a355](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/commit/203a35518cfb3cda8d1061c5247e2ad66bfbff9d))
 
-# [0.2.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.1.4...0.2.0) (2024-03-16)
+## [0.2.0](https://github.com/JoshuaKGoldberg/prettier-plugin-curly/compare/0.1.4...0.2.0) (2024-03-16)
 
 ### Bug Fixes
 

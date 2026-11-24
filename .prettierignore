@@ -1,4 +1,5 @@
 /.husky
+/_tmp_*
 /coverage
-/lib
+/dist
 /pnpm-lock.yaml
